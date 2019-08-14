@@ -1,0 +1,54 @@
+{
+  "name": "@raptorsystems/web",
+  "version": "1.0.0",
+  "description": "Raptor Systems Landing Page (www.raptorsystems.cl)",
+  "author": {
+    "name": "Raptor Systems SpA",
+    "email": "raptor@raptorsystems.cl"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "deploy": "netlify deploy -d=dist",
+    "analyze": "nuxt build --analyze",
+    "lint": "eslint --ext .ts,.js,.vue src",
+    "lint:fix": "eslint --fix --ext .ts,.js,.vue src",
+    "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "@nuxtjs/google-analytics": "^2.2.0",
+    "@nuxtjs/pwa": "^3.0.0-beta.16",
+    "@nuxtjs/vuetify": "^1.2.1",
+    "dotenv": "^8.0.0",
+    "nuxt": "^2.8.1",
+    "nuxt-webfontloader": "^1.1.0",
+    "vee-validate": "^2.2.14"
+  },
+  "devDependencies": {
+    "@mdi/js": "^3.9.97",
+    "@nuxt/typescript": "^2.8.1",
+    "@types/dotenv": "^6.1.1",
+    "@typescript-eslint/eslint-plugin": "^1.13.0",
+    "@typescript-eslint/parser": "^1.13.0",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-loader": "^2.2.1",
+    "eslint-plugin-prettier": "3.1.0",
+    "eslint-plugin-vue": "^5.2.3",
+    "eslint-plugin-vuetify": "^1.0.0-beta.3",
+    "netlify-cli": "^2.12.0",
+    "prettier": "1.18.2",
+    "ts-node": "^8.3.0",
+    "ts-node-dev": "^1.0.0-pre.40",
+    "typescript": "^3.5.3"
+  },
+  "engines": {
+    "node": "12.8.0",
+    "yarn": "1.17.3"
+  }
+}
