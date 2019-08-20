@@ -1,6 +1,7 @@
-import NuxtConfiguration from '@nuxt/config'
+/* eslint-disable @typescript-eslint/camelcase */
+import { Configuration } from '@nuxt/types'
 
-const config: NuxtConfiguration = {
+const config: Configuration = {
   mode: 'spa',
 
   srcDir: 'src/',
@@ -27,12 +28,9 @@ const config: NuxtConfiguration = {
 
   plugins: ['~/plugins/vee-validate'],
 
-  modules: [
-    '@nuxtjs/pwa',
-    '@nuxtjs/google-analytics',
-    '@nuxtjs/vuetify',
-    'nuxt-webfontloader',
-  ],
+  modules: ['@nuxtjs/pwa', '@nuxtjs/google-analytics', 'nuxt-webfontloader'],
+
+  buildModules: ['@nuxt/typescript-build', '@nuxtjs/vuetify'],
 
   googleAnalytics: {
     id: process.env.googleID || '.',
