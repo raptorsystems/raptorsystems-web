@@ -1,10 +1,8 @@
-import VeeValidate, { Validator } from 'vee-validate'
-import es from 'vee-validate/dist/locale/es'
-import Vue from 'vue'
+import { extend, localize } from 'vee-validate'
+import es from 'vee-validate/dist/locale/es.json'
+import { email, required } from 'vee-validate/dist/rules'
 
-Vue.use(VeeValidate, {
-  locale: 'es',
-  delay: 500,
-})
+extend('email', email)
+extend('required', required)
 
-Validator.localize('es', es)
+localize('es', es)
