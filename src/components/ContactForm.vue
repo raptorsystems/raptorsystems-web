@@ -1,35 +1,31 @@
 <template>
-  <div>
+  <ValidationObserver v-slot="{ invalid, validated, validate }">
     <v-form
       ref="form"
       :name="formName"
       method="post"
       netlify="netlify"
       netlify-honeypot="bot-field"
-      @submit.prevent="submit"
+      @submit.prevent="submit(validate)"
     >
       <v-card class="pa-3" light>
         <v-card-text>
           <v-text-field v-show="false" name="bot-field"></v-text-field>
-          <v-text-field
+          <ValidatedTextField
             v-model="form.nombre"
-            v-validate="'required'"
+            rules="required"
             name="nombre"
             label="Nombre"
             append-icon="person"
-            :error-messages="errors.collect('nombre')"
-            data-vv-name="nombre"
-          ></v-text-field>
-          <v-text-field
+          ></ValidatedTextField>
+          <ValidatedTextField
             v-model="form.email"
-            v-validate="'required|email'"
+            rules="required|email"
             name="email"
             label="Email"
             type="email"
             append-icon="email"
-            :error-messages="errors.collect('email')"
-            data-vv-name="email"
-          ></v-text-field>
+          ></ValidatedTextField>
           <v-text-field
             v-model="form.telefono"
             name="telefono"
@@ -46,14 +42,15 @@
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn
-            large
+            x-large
             rounded
             depressed
             color="primary"
             type="submit"
             min-width="160"
+            :disabled="validated && invalid"
             >enviar
-            <v-icon right>send</v-icon>
+            <v-icon right small>send</v-icon>
           </v-btn>
           <v-spacer></v-spacer>
         </v-card-actions>
@@ -63,11 +60,19 @@
       <div v-html="snackbar.text"></div>
       <v-btn color="white" text @click="snackbar.value = false">cerrar</v-btn>
     </v-snackbar>
-  </div>
+  </ValidationObserver>
 </template>
 
 <script>
+// components
+import { ValidationObserver } from 'vee-validate'
+import ValidatedTextField from '~/components/ValidatedTextField'
+
 export default {
+  components: {
+    ValidationObserver,
+    ValidatedTextField,
+  },
   props: {
     email: { type: String, required: true },
   },
@@ -119,8 +124,8 @@ export default {
       `
       this.showSnackbar()
     },
-    async submit() {
-      if (await this.$validator.validate()) {
+    async submit(validate) {
+      if (await validate()) {
         try {
           await this.$axios.$post(
             '/',
