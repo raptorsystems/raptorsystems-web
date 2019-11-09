@@ -60,7 +60,12 @@ const config: Configuration = {
 
   plugins: ['~/plugins/vee-validate'],
 
-  modules: ['@nuxtjs/pwa', '@nuxtjs/google-analytics', 'nuxt-webfontloader'],
+  modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/google-analytics',
+    '@nuxtjs/pwa',
+    'nuxt-webfontloader',
+  ],
 
   buildModules: ['@nuxt/typescript-build', '@nuxtjs/vuetify'],
 
