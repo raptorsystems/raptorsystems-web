@@ -57,7 +57,7 @@
         </v-card-actions>
       </v-card>
     </v-form>
-    <v-snackbar v-bind="snackbar">
+    <v-snackbar bottom v-bind="snackbar">
       <div v-html="snackbar.text"></div>
       <v-btn color="white" text @click="snackbar.value = false">cerrar</v-btn>
     </v-snackbar>
@@ -82,7 +82,6 @@ export default {
       formName: 'contact',
       snackbar: {
         value: false,
-        color: 'success',
         timeout: 0,
         text: '',
       },
@@ -110,18 +109,17 @@ export default {
     },
     showSuccess() {
       this.closeSnackbar()
-      this.snackbar.color = 'success'
       this.snackbar.text = `
-        📨 Mensaje enviado! pronto te contactaremos.
+        Mensaje enviado 📨<br>pronto te contactaremos!
       `
       this.showSnackbar()
     },
     showFailure() {
       this.closeSnackbar()
-      this.snackbar.color = 'error'
       this.snackbar.text = `
-        No fue posible enviar el mensaje 😞 favor envíe un email a
-        <a class='white--text' href='mailto:${this.email}'>${this.email}</a>
+        No fue posible enviar el mensaje 😞<br>
+        envíanos un email directamente a:<br>
+        <a class='font-weight-bold' href='mailto:${this.email}'>${this.email}</a>
       `
       this.showSnackbar()
     },
