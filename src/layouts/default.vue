@@ -1,25 +1,33 @@
 <template>
   <v-app>
     <v-app-bar id="app-bar" app elevate-on-scroll>
-      <v-toolbar-title>
-        <RaptorLogo :height="24"></RaptorLogo>
-      </v-toolbar-title>
+      <RaptorLogo :height="42"></RaptorLogo>
       <v-spacer></v-spacer>
-      <ContactBtn depressed rounded>contáctanos</ContactBtn>
+      <ContactBtn
+        v-if="$vuetify.breakpoint.smAndUp"
+        depressed
+        rounded
+        color="primary"
+      >
+        contáctanos
+      </ContactBtn>
+      <ContactBtn v-else rounded color="primary">
+        <v-icon>mdi-phone</v-icon>
+      </ContactBtn>
     </v-app-bar>
 
     <v-content>
       <nuxt></nuxt>
     </v-content>
 
-    <v-footer id="footer" height="320" color="transparent">
+    <v-footer id="footer" height="400" color="transparent">
       <v-row
-        class="py-4 flex-column fill-height"
+        class="py-8 flex-column fill-height"
         align="center"
         justify="space-around"
       >
-        <RaptorLogo :height="64"></RaptorLogo>
-        <div class="body-2">
+        <RaptorLogo :height="80"></RaptorLogo>
+        <div class="body-2 font-weight-light">
           Copyright &copy; {{ currentYear }} Raptor Systems SpA
         </div>
         <div class="body-2 font-weight-light pt-4">
@@ -40,7 +48,7 @@ export default {
     return {
       raptorLogo: '/images/raptorsystems_light.svg',
       links: {
-        raptor: '//www.raptorsystems.cl',
+        raptor: '//raptorsystems.cl',
       },
     }
   },

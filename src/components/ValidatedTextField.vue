@@ -9,7 +9,6 @@
     <v-text-field
       v-model="innerValue"
       :error-messages="errors"
-      :success="valid"
       v-bind="$attrs"
       v-on="$listeners"
     ></v-text-field>

@@ -1,6 +1,6 @@
 <template>
-  <a class="logo" :href="link">
-    <img :height="height" :src="logo" :alt="alt" />
+  <a :href="link">
+    <img class="logo" :height="height" :src="logo" :alt="alt" />
   </a>
 </template>
 
@@ -21,6 +21,6 @@ export default {
 
 <style scoped>
 .logo {
-  vertical-align: sub;
+  vertical-align: middle;
 }
 </style>

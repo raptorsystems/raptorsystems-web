@@ -1,0 +1,13 @@
+$body-font-family: 'Lato', sans-serif !default;
+$heading-font-family: 'Raleway', sans-serif;
+
+@import '~vuetify/src/styles/styles.sass';
+
+$font-size-root: 20px;
+$border-radius-root: 16px;
+
+$container-max-widths: (
+  'md': 600px,
+  'lg': 960px - 16px,
+  'xl': 1280px - 16px
+);

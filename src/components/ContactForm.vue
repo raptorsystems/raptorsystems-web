@@ -8,7 +8,7 @@
       netlify-honeypot="bot-field"
       @submit.prevent="submit(validate)"
     >
-      <v-card class="pa-3" light>
+      <v-card class="pa-3 frosted" elevation="6">
         <v-card-text>
           <v-text-field v-show="false" name="bot-field"></v-text-field>
           <ValidatedTextField
@@ -16,7 +16,7 @@
             rules="required"
             name="nombre"
             label="Nombre"
-            append-icon="person"
+            append-icon="mdi-account"
           ></ValidatedTextField>
           <ValidatedTextField
             v-model="form.email"
@@ -24,13 +24,13 @@
             name="email"
             label="Email"
             type="email"
-            append-icon="email"
+            append-icon="mdi-email"
           ></ValidatedTextField>
           <v-text-field
             v-model="form.telefono"
             name="telefono"
             label="Teléfono"
-            append-icon="phone"
+            append-icon="mdi-phone"
           ></v-text-field>
           <v-textarea
             v-model="form.mensaje"
@@ -42,15 +42,16 @@
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn
-            x-large
+            large
             rounded
-            depressed
-            color="primary"
+            elevation="0"
+            color="white"
+            class="primary--text"
             type="submit"
             min-width="160"
             :disabled="validated && invalid"
             >enviar
-            <v-icon right small>send</v-icon>
+            <v-icon right>mdi-send</v-icon>
           </v-btn>
           <v-spacer></v-spacer>
         </v-card-actions>
@@ -111,7 +112,7 @@ export default {
       this.closeSnackbar()
       this.snackbar.color = 'success'
       this.snackbar.text = `
-        📨 Mensaje enviado! pronto le contactaremos.
+        📨 Mensaje enviado! pronto te contactaremos.
       `
       this.showSnackbar()
     },
@@ -144,3 +145,10 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.frosted {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(24px);
+}
+</style>

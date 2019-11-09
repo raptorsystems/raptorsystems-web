@@ -1,27 +1,59 @@
-/* eslint-disable @typescript-eslint/camelcase */
 import { Configuration } from '@nuxt/types'
+import es from 'vuetify/es5/locale/es'
+
+const theme = {
+  primary: '#235de5',
+  secondary: '#9dfaff',
+  error: '#fff',
+}
 
 const config: Configuration = {
   mode: 'spa',
+  server: { port: 3010 },
 
   srcDir: 'src/',
 
   head: {
-    title: 'Raptor Systems | Software, Cloud, Web y Hardware en Antofagasta',
+    title: 'Raptor Systems – Desarrollo de Software en Antofagasta',
+    meta: [
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content: `software, desarrollo software, antofagasta`,
+      },
+      {
+        hid: 'msapplication-TileColor',
+        name: 'msapplication-TileColor',
+        content: theme.primary,
+      },
+    ],
+    link: [
+      {
+        rel: 'apple-touch-icon',
+        sizes: '180x180',
+        href: '/apple-touch-icon.png',
+      },
+      {
+        rel: 'mask-icon',
+        href: '/safari-pinned-tab.svg',
+        color: theme.primary,
+      },
+    ],
   },
 
-  meta: {
-    mobileApp: false,
-  },
-
-  manifest: {
-    name: 'Raptor Systems',
-    short_name: 'Raptor Systems',
-    description: `Software, Cloud, Web y Hardware en Antofagasta.`,
-    display: 'browser',
-    lang: 'es-CL',
-    start_url: '/',
-    author: 'Raptor Systems',
+  pwa: {
+    meta: {
+      mobileApp: false,
+    },
+    manifest: {
+      name: 'Raptor Systems',
+      short_name: 'Raptor Systems',
+      description: `Creamos software enfocado en solucionar los problemas de tus clientes, cuenta con nosotros como partner tecnológico en Antofagasta.`,
+      display: 'browser',
+      lang: 'es-CL',
+      start_url: '/',
+      author: 'Raptor Systems',
+    },
   },
 
   generate: { fallback: true },
@@ -36,11 +68,27 @@ const config: Configuration = {
     id: process.env.googleID || '.',
   },
 
-  vuetify: {},
+  vuetify: {
+    treeShake: true,
+    customVariables: ['~/assets/variables.scss'],
+    icons: {
+      iconfont: 'mdiSvg',
+    },
+    lang: {
+      locales: { es },
+      current: 'es',
+    },
+    theme: {
+      themes: {
+        light: theme,
+        dark: theme,
+      },
+    },
+  },
 
   webfontloader: {
     google: {
-      families: ['Roboto:300,400,500,700|Material+Icons'],
+      families: ['Raleway:100,400,500', 'Lato:300,400,500'],
     },
   },
 }
