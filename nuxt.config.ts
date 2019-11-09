@@ -61,7 +61,7 @@ const config: Configuration = {
   plugins: ['~/plugins/vee-validate'],
 
   modules: [
-    '@nuxtjs/axios',
+    ['@nuxtjs/axios', { baseURL: '/' }],
     '@nuxtjs/google-analytics',
     '@nuxtjs/pwa',
     'nuxt-webfontloader',
