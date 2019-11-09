@@ -70,7 +70,7 @@ const config: Configuration = {
   buildModules: ['@nuxt/typescript-build', '@nuxtjs/vuetify'],
 
   googleAnalytics: {
-    id: process.env.googleID || '.',
+    id: process.env.GOOGLE_ID || '.',
   },
 
   vuetify: {
