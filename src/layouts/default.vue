@@ -1,7 +1,13 @@
 <template>
   <v-app>
-    <v-app-bar id="app-bar" app elevate-on-scroll>
-      <RaptorLogo :height="42"></RaptorLogo>
+    <v-app-bar
+      v-scroll="onScroll"
+      app
+      elevate-on-scroll
+      :scroll-threshold="scrollThreshold"
+      :color="appBarColor"
+    >
+      <RaptorLogo :dark="!isScrolled" :height="42"></RaptorLogo>
       <v-spacer></v-spacer>
       <ContactBtn
         v-if="$vuetify.breakpoint.smAndUp"
@@ -11,7 +17,7 @@
       >
         contáctanos
       </ContactBtn>
-      <ContactBtn v-else rounded color="primary">
+      <ContactBtn v-else depressed rounded color="primary">
         <v-icon>mdi-phone</v-icon>
       </ContactBtn>
     </v-app-bar>
@@ -46,6 +52,8 @@ export default {
   components: { ContactBtn, RaptorLogo },
   data() {
     return {
+      currentScroll: 0,
+      scrollThreshold: 20,
       raptorLogo: '/images/raptorsystems_light.svg',
       links: {
         raptor: '//raptorsystems.cl',
@@ -55,6 +63,17 @@ export default {
   computed: {
     currentYear() {
       return new Date().getFullYear()
+    },
+    isScrolled() {
+      return this.currentScroll > this.scrollThreshold
+    },
+    appBarColor() {
+      return this.isScrolled ? 'white' : 'primary'
+    },
+  },
+  methods: {
+    onScroll() {
+      this.currentScroll = window.pageYOffset
     },
   },
 }

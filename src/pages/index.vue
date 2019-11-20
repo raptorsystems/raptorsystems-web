@@ -17,7 +17,7 @@
             /images/hero,w_1920.jpg 1920w"
           src="/images/hero,w_1920.jpg"
         >
-          <v-container style="padding-top: 64px; padding-bottom: 128px">
+          <v-container style="padding-top: 96px; padding-bottom: 128px">
             <v-row align-content="center" justify="end" class="text-md-right">
               <v-col cols="12" lg="6">
                 <h1 class="display-1">
