@@ -7,14 +7,19 @@
 <script>
 export default {
   props: {
+    dark: { type: Boolean, default: false },
     height: { type: Number, default: 64 },
   },
   data() {
     return {
-      logo: '/raptorsystems_light.svg',
       link: '//www.raptorsystems.cl',
       alt: 'Raptor Systems',
     }
+  },
+  computed: {
+    logo() {
+      return this.dark ? '/raptorsystems_dark.svg' : '/raptorsystems_light.svg'
+    },
   },
 }
 </script>
