@@ -1,5 +1,5 @@
 <template>
-  <ValidationObserver v-slot="{ invalid, validated, validate }">
+  <ValidationObserver v-slot="{ failed, validate }">
     <v-form
       ref="form"
       :name="formName"
@@ -49,7 +49,7 @@
             class="primary--text"
             type="submit"
             min-width="160"
-            :disabled="validated && invalid"
+            :disabled="failed"
             >enviar
             <v-icon right>mdi-send</v-icon>
           </v-btn>

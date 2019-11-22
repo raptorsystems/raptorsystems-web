@@ -1,6 +1,6 @@
 <template>
   <ValidationProvider
-    v-slot="{ errors, valid }"
+    v-slot="{ errors, passed }"
     :name="validationName"
     :vid="$attrs.vid"
     :rules="rules"
@@ -9,6 +9,7 @@
     <v-text-field
       v-model="innerValue"
       :error-messages="errors"
+      :success="passed"
       v-bind="$attrs"
       v-on="$listeners"
     ></v-text-field>
