@@ -28,7 +28,7 @@
     "dotenv": "^8.2.0",
     "nuxt": "^2.10.2",
     "nuxt-webfontloader": "^1.1.0",
-    "vee-validate": "^3.0.11"
+    "vee-validate": "^3.1.0"
   },
   "devDependencies": {
     "@mdi/js": "^4.5.95",
@@ -43,7 +43,7 @@
     "prettier": "1.19.1"
   },
   "engines": {
-    "node": "12.13.0",
+    "node": "12.13.1",
     "yarn": "1.19.1"
   }
 }
