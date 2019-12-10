@@ -78,7 +78,7 @@ export default Vue.extend({
     },
   },
   methods: {
-    onScroll() {
+    onScroll(): void {
       this.currentScroll = window.pageYOffset
     },
   },

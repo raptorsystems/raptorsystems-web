@@ -96,27 +96,27 @@ export default Vue.extend({
     }
   },
   methods: {
-    encode(data) {
+    encode(data): string {
       return Object.keys(data)
         .map(
           key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`,
         )
         .join('&')
     },
-    showSnackbar() {
+    showSnackbar(): void {
       this.snackbar.value = true
     },
-    closeSnackbar() {
+    closeSnackbar(): void {
       this.snackbar.value = false
     },
-    showSuccess() {
+    showSuccess(): void {
       this.closeSnackbar()
       this.snackbar.text = `
         Mensaje enviado 📨<br>pronto te contactaremos!
       `
       this.showSnackbar()
     },
-    showFailure() {
+    showFailure(): void {
       this.closeSnackbar()
       this.snackbar.text = `
         No fue posible enviar el mensaje 😞<br>
@@ -125,7 +125,7 @@ export default Vue.extend({
       `
       this.showSnackbar()
     },
-    async submit(validate) {
+    async submit(validate): Promise<void> {
       if (await validate()) {
         try {
           await this.$axios.$post(

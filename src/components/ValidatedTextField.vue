@@ -39,14 +39,14 @@ export default Vue.extend({
     }
   },
   computed: {
-    validationName() {
+    validationName(): string {
       const { label } = this.$attrs
-      return label && label.toLowerCase()
+      return label?.toLowerCase()
     },
   },
   watch: {
     // Handles external model changes
-    value(newVal) {
+    value(newVal): void {
       this.innerValue = newVal
     },
   },

@@ -21,12 +21,12 @@ export default Vue.extend({
     top: { type: Boolean, default: false },
   },
   computed: {
-    fill() {
-      const themeColor = this.$vuetify.theme.themes.light[this.color]
+    fill(): string {
+      const themeColor = this.$vuetify.theme.themes.light[this.color] as string
       if (!themeColor) return this.color
       return themeColor
     },
-    points() {
+    points(): string {
       if (this.top) return '0,0 100,0 100,100'
       return '0,100 100,0 100,100'
     },

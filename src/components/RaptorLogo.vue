@@ -19,7 +19,7 @@ export default Vue.extend({
     }
   },
   computed: {
-    logo() {
+    logo(): string {
       return this.dark ? '/raptorsystems_dark.svg' : '/raptorsystems_light.svg'
     },
   },
