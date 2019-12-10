@@ -30,6 +30,8 @@ module.exports = {
   plugins: ['vuetify'],
 
   rules: {
+    // @typescript-eslint
+    '@typescript-eslint/camelcase': 'off',
     // vuetify
     'vuetify/no-deprecated-classes': 'error',
     'vuetify/grid-unknown-attributes': 'error',
