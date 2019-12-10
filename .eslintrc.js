@@ -30,11 +30,6 @@ module.exports = {
   plugins: ['vuetify'],
 
   rules: {
-    'require-atomic-updates': 'off',
-    // @typescript-eslint
-    '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/camelcase': 'off',
-    '@typescript-eslint/unbound-method': 0,
     // vuetify
     'vuetify/no-deprecated-classes': 'error',
     'vuetify/grid-unknown-attributes': 'error',

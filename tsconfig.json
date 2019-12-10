@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
     /* Basic Options */
-    "target": "esnext",
+    "target": "es2019",
     "module": "esnext",
-    "lib": ["esnext", "esnext.asynciterable", "dom"],
+    "lib": ["es2019", "esnext.asynciterable", "dom"],
     "allowJs": true,
     "sourceMap": true,
     "outDir": "dist",

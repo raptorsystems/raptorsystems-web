@@ -1,6 +1,8 @@
 import { Configuration } from '@nuxt/types'
 import es from 'vuetify/es5/locale/es'
 
+require('dotenv').config()
+
 const theme = {
   primary: '#235de5',
   secondary: '#9dfaff',
@@ -9,9 +11,8 @@ const theme = {
 
 const config: Configuration = {
   mode: 'spa',
-  server: { port: 3010 },
 
-  srcDir: 'src/',
+  srcDir: 'src',
 
   head: {
     title: 'Raptor Systems – Desarrollo de Software en Antofagasta',
@@ -60,17 +61,26 @@ const config: Configuration = {
 
   plugins: ['~/plugins/vee-validate'],
 
-  modules: [
-    ['@nuxtjs/axios', { baseURL: '/' }],
+  modules: ['@nuxtjs/axios', '@nuxtjs/pwa', 'nuxt-webfontloader'],
+
+  buildModules: [
+    '@nuxt/typescript-build',
+    '@nuxtjs/dotenv',
     '@nuxtjs/google-analytics',
-    '@nuxtjs/pwa',
-    'nuxt-webfontloader',
+    '@nuxtjs/vuetify',
   ],
 
-  buildModules: ['@nuxt/typescript-build', '@nuxtjs/vuetify'],
+  axios: {
+    baseURL: '/',
+  },
+
+  dotenv: {
+    path: process.cwd(),
+  },
 
   googleAnalytics: {
-    id: process.env.GOOGLE_ID || '.',
+    dev: false,
+    id: process.env.GOOGLE_ID,
   },
 
   vuetify: {
