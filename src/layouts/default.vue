@@ -44,12 +44,18 @@
   </v-app>
 </template>
 
-<script>
-import ContactBtn from '~/components/ContactBtn'
-import RaptorLogo from '~/components/RaptorLogo'
+<script lang="ts">
+import Vue from 'vue'
 
-export default {
-  components: { ContactBtn, RaptorLogo },
+// components
+import ContactBtn from '~/components/ContactBtn.vue'
+import RaptorLogo from '~/components/RaptorLogo.vue'
+
+export default Vue.extend({
+  components: {
+    ContactBtn,
+    RaptorLogo,
+  },
   data() {
     return {
       currentScroll: 0,
@@ -61,13 +67,13 @@ export default {
     }
   },
   computed: {
-    currentYear() {
+    currentYear(): number {
       return new Date().getFullYear()
     },
-    isScrolled() {
+    isScrolled(): boolean {
       return this.currentScroll > this.scrollThreshold
     },
-    appBarColor() {
+    appBarColor(): string {
       return this.isScrolled ? 'white' : 'primary'
     },
   },
@@ -76,7 +82,7 @@ export default {
       this.currentScroll = window.pageYOffset
     },
   },
-}
+})
 </script>
 
 <style>

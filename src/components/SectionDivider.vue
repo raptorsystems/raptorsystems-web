@@ -10,8 +10,10 @@
   </svg>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({
   props: {
     height: { type: [String, Number], default: 64 },
     color: { type: String, default: 'white' },
@@ -29,7 +31,7 @@ export default {
       return '0,100 100,0 100,100'
     },
   },
-}
+})
 </script>
 
 <style scoped>

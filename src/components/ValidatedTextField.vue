@@ -16,11 +16,13 @@
   </ValidationProvider>
 </template>
 
-<script>
+<script lang="ts">
+import Vue, { PropOptions } from 'vue'
+
 // components
 import { ValidationProvider } from 'vee-validate'
 
-export default {
+export default Vue.extend({
   name: 'ValidatedTextField',
   components: {
     ValidationProvider,
@@ -29,11 +31,11 @@ export default {
   props: {
     rules: { type: [Object, String], default: '' },
     // must be included in props
-    value: { type: null, default: undefined },
+    value: { type: null as any, default: '' } as PropOptions<any>,
   },
   data() {
     return {
-      innerValue: undefined,
+      innerValue: this.value,
     }
   },
   computed: {
@@ -45,16 +47,8 @@ export default {
   watch: {
     // Handles external model changes
     value(newVal) {
-      this.innerValue = this.formatValue(newVal)
+      this.innerValue = newVal
     },
   },
-  created() {
-    this.innerValue = this.formatValue(this.value)
-  },
-  methods: {
-    formatValue(value) {
-      return value
-    },
-  },
-}
+})
 </script>

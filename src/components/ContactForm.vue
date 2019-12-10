@@ -64,12 +64,14 @@
   </ValidationObserver>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue'
+
 // components
 import { ValidationObserver } from 'vee-validate'
-import ValidatedTextField from '~/components/ValidatedTextField'
+import ValidatedTextField from '~/components/ValidatedTextField.vue'
 
-export default {
+export default Vue.extend({
   components: {
     ValidationObserver,
     ValidatedTextField,
@@ -132,7 +134,9 @@ export default {
               'form-name': this.formName,
               ...this.form,
             }),
-            { header: { 'Content-Type': 'application/x-www-form-urlencoded' } },
+            {
+              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            },
           )
           this.showSuccess()
         } catch (error) {
@@ -141,7 +145,7 @@ export default {
       }
     },
   },
-}
+})
 </script>
 
 <style scoped>

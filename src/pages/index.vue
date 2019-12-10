@@ -224,12 +224,15 @@
   </div>
 </template>
 
-<script>
-import ContactBtn from '~/components/ContactBtn'
-import ContactForm from '~/components/ContactForm'
-import SectionDivider from '~/components/SectionDivider'
+<script lang="ts">
+import Vue from 'vue'
 
-export default {
+// components
+import ContactBtn from '~/components/ContactBtn.vue'
+import ContactForm from '~/components/ContactForm.vue'
+import SectionDivider from '~/components/SectionDivider.vue'
+
+export default Vue.extend({
   components: {
     ContactBtn,
     ContactForm,
@@ -302,7 +305,7 @@ export default {
       },
     }
   },
-}
+})
 </script>
 
 <style>

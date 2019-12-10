@@ -4,8 +4,10 @@
   </a>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from 'vue'
+
+export default Vue.extend({
   props: {
     dark: { type: Boolean, default: false },
     height: { type: Number, default: 64 },
@@ -21,7 +23,7 @@ export default {
       return this.dark ? '/raptorsystems_dark.svg' : '/raptorsystems_light.svg'
     },
   },
-}
+})
 </script>
 
 <style scoped>
