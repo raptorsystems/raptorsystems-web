@@ -1,5 +1,5 @@
 import { Configuration } from '@nuxt/types'
-import es from 'vuetify/es5/locale/es'
+import es from 'vuetify/lib/locale/es'
 
 require('dotenv').config()
 
