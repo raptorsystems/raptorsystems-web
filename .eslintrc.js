@@ -4,7 +4,8 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2019,
     sourceType: 'module',
-    project: 'tsconfig.json',
+    tsconfigRootDir: __dirname,
+    project: ['./tsconfig.json'],
     extraFileExtensions: ['.vue'],
   },
 
@@ -22,8 +23,8 @@ module.exports = {
     // Prettier
     // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#usage-with-prettier
     'prettier',
-    'prettier/@typescript-eslint',
     'prettier/vue',
+    'prettier/@typescript-eslint',
     'plugin:prettier/recommended', // Enables eslint-plugin-prettier and displays prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
   ],
 
