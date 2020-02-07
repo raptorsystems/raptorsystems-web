@@ -1,13 +1,7 @@
 import { Configuration } from '@nuxt/types'
-import es from 'vuetify/lib/locale/es'
+import { theme } from './vuetify.options'
 
 require('dotenv').config()
-
-const theme = {
-  primary: '#235de5',
-  secondary: '#9dfaff',
-  error: '#fff',
-}
 
 const config: Configuration = {
   mode: 'spa',
@@ -86,19 +80,7 @@ const config: Configuration = {
   vuetify: {
     treeShake: true,
     customVariables: ['~/assets/variables.scss'],
-    icons: {
-      iconfont: 'mdiSvg',
-    },
-    lang: {
-      locales: { es },
-      current: 'es',
-    },
-    theme: {
-      themes: {
-        light: theme,
-        dark: theme,
-      },
-    },
+    optionsPath: '../vuetify.options.ts', // relative to srcDir
   },
 
   webfontloader: {
