@@ -1,6 +1,11 @@
 <template>
   <a :href="link">
-    <img class="logo" :height="height" :src="logo" :alt="alt" />
+    <img
+      :class="{ logo: true, shadow: dark }"
+      :height="height"
+      :src="logo"
+      :alt="alt"
+    />
   </a>
 </template>
 
@@ -29,5 +34,8 @@ export default Vue.extend({
 <style scoped>
 .logo {
   vertical-align: middle;
+}
+.shadow {
+  filter: drop-shadow(0px 3px 1px rgba(0, 0, 0, 0.2));
 }
 </style>
