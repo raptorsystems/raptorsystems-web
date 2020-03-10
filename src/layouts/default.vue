@@ -18,7 +18,7 @@
         contáctanos
       </ContactBtn>
       <ContactBtn v-else depressed rounded color="primary">
-        <v-icon>mdi-phone</v-icon>
+        <v-icon>$mdiPhone</v-icon>
       </ContactBtn>
     </v-app-bar>
 

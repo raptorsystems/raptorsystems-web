@@ -199,7 +199,7 @@
                     :href="`tel:${phone}`"
                   >
                     <v-list-item-action>
-                      <v-icon>mdi-whatsapp</v-icon>
+                      <v-icon>$mdiWhatsapp</v-icon>
                     </v-list-item-action>
                     <v-list-item-title class="text-left">
                       {{ phone }}
@@ -208,7 +208,7 @@
                   <!-- email -->
                   <v-list-item class="px-2" :href="`mailto:${contact.email}`">
                     <v-list-item-action>
-                      <v-icon>mdi-email</v-icon>
+                      <v-icon>$mdiEmail</v-icon>
                     </v-list-item-action>
                     <v-list-item-title class="text-left">
                       {{ contact.email }}

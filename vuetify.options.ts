@@ -1,3 +1,4 @@
+import { mdiAccount, mdiEmail, mdiPhone, mdiSend, mdiWhatsapp } from '@mdi/js'
 import es from 'vuetify/lib/locale/es'
 import { UserVuetifyPreset } from 'vuetify/types'
 
@@ -7,9 +8,18 @@ export const theme = {
   error: '#fff',
 }
 
+const icons = {
+  mdiAccount,
+  mdiEmail,
+  mdiPhone,
+  mdiSend,
+  mdiWhatsapp,
+}
+
 export const options: UserVuetifyPreset = {
   icons: {
     iconfont: 'mdiSvg',
+    values: icons,
   },
   lang: {
     locales: { es },

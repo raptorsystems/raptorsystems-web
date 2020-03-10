@@ -16,7 +16,7 @@
             rules="required"
             name="nombre"
             label="Nombre"
-            append-icon="mdi-account"
+            append-icon="$mdiAccount"
           ></ValidatedTextField>
           <ValidatedTextField
             v-model="form.email"
@@ -24,13 +24,13 @@
             name="email"
             label="Email"
             type="email"
-            append-icon="mdi-email"
+            append-icon="$mdiEmail"
           ></ValidatedTextField>
           <v-text-field
             v-model="form.telefono"
             name="telefono"
             label="Teléfono"
-            append-icon="mdi-phone"
+            append-icon="$mdiPhone"
           ></v-text-field>
           <v-textarea
             v-model="form.mensaje"
@@ -51,7 +51,7 @@
             min-width="160"
             :disabled="failed"
             >enviar
-            <v-icon right>mdi-send</v-icon>
+            <v-icon right>$mdiSend</v-icon>
           </v-btn>
           <v-spacer></v-spacer>
         </v-card-actions>

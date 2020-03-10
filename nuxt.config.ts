@@ -79,6 +79,7 @@ const config: Configuration = {
 
   vuetify: {
     treeShake: true,
+    defaultAssets: false,
     customVariables: ['~/assets/variables.scss'],
     optionsPath: '../vuetify.options.ts', // relative to srcDir
   },
