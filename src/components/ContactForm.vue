@@ -99,7 +99,8 @@ export default Vue.extend({
     encode(data): string {
       return Object.keys(data)
         .map(
-          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`,
+          (key) =>
+            `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`,
         )
         .join('&')
     },
