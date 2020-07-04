@@ -20,7 +20,7 @@
           <v-container style="padding-top: 96px; padding-bottom: 128px;">
             <v-row align-content="center" justify="end" class="text-md-right">
               <v-col cols="12" lg="6">
-                <h1 class="display-1">
+                <h1 class="text-h4">
                   {{ hero.title }}
                 </h1>
                 <div
@@ -56,7 +56,7 @@
         <v-container style="padding-top: 92px; padding-bottom: 128px;">
           <v-row>
             <v-col cols="12">
-              <h2 class="display-1 font-weight-thin">
+              <h2 class="text-h4 font-weight-thin">
                 Servicios
               </h2>
             </v-col>
@@ -70,7 +70,7 @@
                     :elevation="hover ? 12 : 0"
                   >
                     <v-img :src="item.icon" height="92" contain />
-                    <div class="pt-6 title">{{ item.title }}</div>
+                    <div class="pt-6 text-h6">{{ item.title }}</div>
                   </v-card>
                 </template>
               </v-hover>
@@ -89,7 +89,7 @@
         <v-container style="padding-top: 128px; padding-bottom: 192px;">
           <v-row class="mb-4">
             <v-col cols="12">
-              <h2 class="display-1 font-weight-thin">
+              <h2 class="text-h4 font-weight-thin">
                 Nuestros proyectos
               </h2>
             </v-col>
@@ -109,7 +109,7 @@
               </v-hover>
             </v-col>
             <v-col cols="12" lg="4">
-              <p class="title">{{ project.name }}</p>
+              <p class="text-h6">{{ project.name }}</p>
               <p v-html="project.description"></p>
               <v-btn
                 rounded
@@ -136,7 +136,7 @@
         <v-container style="padding-top: 128px; padding-bottom: 160px;">
           <v-row class="mb-6">
             <v-col cols="12">
-              <h2 class="display-1 font-weight-thin">
+              <h2 class="text-h4 font-weight-thin">
                 Tecnologías que utilizamos
               </h2>
             </v-col>
@@ -187,7 +187,7 @@
               <!-- info -->
               <v-col cols="12" lg="6" order="1" order-lg="2">
                 <!-- title -->
-                <h2 class="pb-4 display-1 font-weight-thin">
+                <h2 class="pb-4 text-h4 font-weight-thin">
                   Contáctanos
                 </h2>
                 <v-list class="transparent">

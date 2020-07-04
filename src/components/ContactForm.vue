@@ -59,7 +59,16 @@
     </v-form>
     <v-snackbar bottom v-bind="snackbar">
       <div v-html="snackbar.text"></div>
-      <v-btn color="white" text @click="snackbar.value = false">cerrar</v-btn>
+      <template #action="{ attrs }">
+        <v-btn
+          v-bind="attrs"
+          color="white"
+          text
+          @click="snackbar.value = false"
+        >
+          cerrar
+        </v-btn>
+      </template>
     </v-snackbar>
   </ValidationObserver>
 </template>
@@ -84,7 +93,7 @@ export default Vue.extend({
       formName: 'contact',
       snackbar: {
         value: false,
-        timeout: 0,
+        timeout: -1,
         text: '',
       },
       form: {

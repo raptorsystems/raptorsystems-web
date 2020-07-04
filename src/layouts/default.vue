@@ -22,9 +22,9 @@
       </ContactBtn>
     </v-app-bar>
 
-    <v-content>
+    <v-main>
       <nuxt></nuxt>
-    </v-content>
+    </v-main>
 
     <v-footer id="footer" height="400" color="transparent">
       <v-row
@@ -33,10 +33,10 @@
         justify="space-around"
       >
         <RaptorLogo :height="80"></RaptorLogo>
-        <div class="body-2 font-weight-light">
+        <div class="text-body-2 font-weight-light">
           Copyright &copy; {{ currentYear }} Raptor Systems SpA
         </div>
-        <div class="body-2 font-weight-light pt-4">
+        <div class="text-body-2 font-weight-light pt-4">
           Hecho en ⚓ Antofagasta
         </div>
       </v-row>
