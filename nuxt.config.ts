@@ -4,7 +4,8 @@ import { theme } from './vuetify.options'
 require('dotenv').config()
 
 const config: NuxtConfig = {
-  mode: 'spa',
+  mode: 'universal',
+  target: 'static',
 
   srcDir: 'src',
 
@@ -63,6 +64,12 @@ const config: NuxtConfig = {
     '@nuxtjs/google-analytics',
     '@nuxtjs/vuetify',
   ],
+
+  build: {
+    transpile: [
+      'vee-validate/dist/rules', // https://logaretm.github.io/vee-validate/guide/rules.html#importing-rules-in-nuxt-js
+    ],
+  },
 
   axios: {
     baseURL: '/',
