@@ -14,7 +14,6 @@ module.exports = {
     'eslint:recommended',
     // ESLint typescript rules
     // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#usage
-    'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     // Nuxt
