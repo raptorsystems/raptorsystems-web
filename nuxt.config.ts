@@ -1,9 +1,9 @@
-import { Configuration } from '@nuxt/types'
+import { NuxtConfig } from '@nuxt/types'
 import { theme } from './vuetify.options'
 
 require('dotenv').config()
 
-const config: Configuration = {
+const config: NuxtConfig = {
   mode: 'spa',
 
   srcDir: 'src',
