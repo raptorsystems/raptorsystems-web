@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^1.0.0",
-    "@nuxtjs/axios": "^5.11.0",
+    "@nuxtjs/axios": "^5.12.0",
     "@nuxtjs/pwa": "^3.0.0-beta.20",
     "nuxt": "^2.13.3",
     "nuxt-webfontloader": "^1.1.0",
@@ -35,14 +35,14 @@
     "@nuxt/typescript-build": "^2.0.0",
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/eslint-config-typescript": "^2.0.0",
-    "@nuxtjs/google-analytics": "^2.3.0",
+    "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/vuetify": "^1.11.2",
     "eslint": "^7.4.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "3.1.4",
-    "eslint-plugin-vuetify": "^1.0.0-beta.6",
+    "eslint-plugin-vuetify": "^1.0.0-beta.7",
     "prettier": "2.0.5",
-    "vuetify": "^2.3.3"
+    "vuetify": "^2.3.4"
   },
   "engines": {
     "node": "^14.5.0"
