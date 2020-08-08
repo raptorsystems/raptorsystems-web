@@ -1,5 +1,9 @@
 <template>
-  <v-btn v-bind="$attrs" @click="$vuetify.goTo('#contact')">
+  <v-btn
+    v-bind="$attrs"
+    aria-label="CONTÁCTANOS"
+    @click="$vuetify.goTo('#contact')"
+  >
     <slot></slot>
   </v-btn>
 </template>
