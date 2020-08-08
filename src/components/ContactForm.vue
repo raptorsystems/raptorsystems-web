@@ -105,7 +105,7 @@ export default Vue.extend({
     }
   },
   methods: {
-    encode(data): string {
+    encode(data: Record<string, string>): string {
       return Object.keys(data)
         .map(
           (key) =>
@@ -135,7 +135,9 @@ export default Vue.extend({
       `
       this.showSnackbar()
     },
-    async submit(validate): Promise<void> {
+    async submit(
+      validate: ({ silent }?: { silent?: boolean }) => Promise<boolean>,
+    ): Promise<void> {
       if (await validate()) {
         try {
           await this.$axios.$post(

@@ -31,7 +31,7 @@ export default Vue.extend({
   props: {
     rules: { type: [Object, String], default: '' },
     // must be included in props
-    value: { type: null as any, default: '' } as PropOptions<any>,
+    value: { type: null as unknown, default: '' } as PropOptions<unknown>,
   },
   data() {
     return {
@@ -46,7 +46,7 @@ export default Vue.extend({
   },
   watch: {
     // Handles external model changes
-    value(newVal): void {
+    value(newVal: unknown): void {
       this.innerValue = newVal
     },
   },

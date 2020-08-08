@@ -1,7 +1,8 @@
 import { NuxtConfig } from '@nuxt/types'
+import dotenv from 'dotenv'
 import { theme } from './vuetify.options'
 
-require('dotenv').config()
+dotenv.config()
 
 const config: NuxtConfig = {
   mode: 'universal',
@@ -80,8 +81,7 @@ const config: NuxtConfig = {
   },
 
   googleAnalytics: {
-    dev: false,
-    id: process.env.GOOGLE_ID,
+    id: process.env.GOOGLE_ID as string,
   },
 
   vuetify: {
