@@ -162,7 +162,7 @@ export default Vue.extend({
 
 <style scoped>
 .frosted {
-  background-color: rgba(255, 255, 255, 0.1) !important;
-  backdrop-filter: blur(24px);
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(32px);
 }
 </style>
