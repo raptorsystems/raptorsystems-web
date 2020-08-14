@@ -5,7 +5,7 @@ module.exports = {
     ecmaVersion: 2019,
     sourceType: 'module',
     tsconfigRootDir: __dirname,
-    project: ['./tsconfig.json'],
+    project: ['./tsconfig.json', './tsconfig.eslint.json'],
     extraFileExtensions: ['.vue'],
   },
 
