@@ -26,17 +26,17 @@
     "@nuxtjs/pwa": "^3.0.0-beta.20",
     "nuxt": "^2.14.1",
     "nuxt-webfontloader": "^1.1.0",
-    "vee-validate": "^3.3.8"
+    "vee-validate": "^3.3.9"
   },
   "devDependencies": {
-    "@mdi/js": "^5.4.55",
+    "@mdi/js": "^5.5.55",
     "@nuxt/types": "^2.14.1",
     "@nuxt/typescript-build": "^2.0.2",
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/eslint-config-typescript": "^3.0.0",
     "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/vuetify": "^1.11.2",
-    "eslint": "^7.6.0",
+    "eslint": "^7.7.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "3.1.4",
     "eslint-plugin-vuetify": "^1.0.0-beta.7",
