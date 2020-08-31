@@ -1,7 +1,6 @@
 import { mdiAccount, mdiEmail, mdiPhone, mdiSend, mdiWhatsapp } from '@mdi/js'
-import es from 'vuetify/lib/locale/es'
+import es from 'vuetify/src/locale/es'
 import { UserVuetifyPreset } from 'vuetify/types'
-import { VuetifyLocale } from 'vuetify/types/services/lang'
 
 export const theme = {
   primary: '#235de5',
@@ -23,7 +22,7 @@ export const options: UserVuetifyPreset = {
     values: icons,
   },
   lang: {
-    locales: { es: es as VuetifyLocale },
+    locales: { es },
     current: 'es',
   },
   theme: {
