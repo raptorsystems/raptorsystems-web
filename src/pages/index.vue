@@ -17,7 +17,7 @@
             /images/hero,w_1920.jpg 1920w"
           src="/images/hero,w_1920.jpg"
         >
-          <v-container style="padding-top: 96px; padding-bottom: 128px;">
+          <v-container style="padding-top: 96px; padding-bottom: 128px">
             <v-row align-content="center" justify="end" class="text-md-right">
               <v-col cols="12" lg="6">
                 <h1 class="text-h4">
@@ -53,12 +53,10 @@
     <!-- Services -->
     <section id="services">
       <v-sheet tile>
-        <v-container style="padding-top: 92px; padding-bottom: 128px;">
+        <v-container style="padding-top: 92px; padding-bottom: 128px">
           <v-row>
             <v-col cols="12">
-              <h2 class="text-h4 font-weight-thin">
-                Servicios
-              </h2>
+              <h2 class="text-h4 font-weight-thin">Servicios</h2>
             </v-col>
           </v-row>
           <v-row justify="space-between">
@@ -86,12 +84,10 @@
       <SectionDivider top height="64"></SectionDivider>
       <!-- content -->
       <v-sheet tile dark class="projects-bg">
-        <v-container style="padding-top: 128px; padding-bottom: 192px;">
+        <v-container style="padding-top: 128px; padding-bottom: 192px">
           <v-row class="mb-4">
             <v-col cols="12">
-              <h2 class="text-h4 font-weight-thin">
-                Nuestros proyectos
-              </h2>
+              <h2 class="text-h4 font-weight-thin">Nuestros proyectos</h2>
             </v-col>
           </v-row>
           <v-row v-for="project in projects" :key="project.name">
@@ -133,7 +129,7 @@
     <!-- Tech -->
     <section id="tech">
       <v-sheet tile>
-        <v-container style="padding-top: 128px; padding-bottom: 160px;">
+        <v-container style="padding-top: 128px; padding-bottom: 160px">
           <v-row class="mb-6">
             <v-col cols="12">
               <h2 class="text-h4 font-weight-thin">
@@ -177,7 +173,7 @@
         >
           <v-container
             class="fill-height"
-            style="padding-top: 64px; padding-bottom: 64px;"
+            style="padding-top: 64px; padding-bottom: 64px"
           >
             <v-row>
               <!-- form -->
@@ -187,9 +183,7 @@
               <!-- info -->
               <v-col cols="12" lg="6" order="1" order-lg="2">
                 <!-- title -->
-                <h2 class="pb-4 text-h4 font-weight-thin">
-                  Contáctanos
-                </h2>
+                <h2 class="pb-4 text-h4 font-weight-thin">Contáctanos</h2>
                 <v-list class="transparent">
                   <!-- phones -->
                   <v-list-item
