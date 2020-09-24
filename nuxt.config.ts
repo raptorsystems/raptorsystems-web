@@ -1,8 +1,5 @@
 import { NuxtConfig } from '@nuxt/types'
-import dotenv from 'dotenv'
 import { theme } from './vuetify.options'
-
-dotenv.config()
 
 const config: NuxtConfig = {
   target: 'static',
@@ -60,7 +57,6 @@ const config: NuxtConfig = {
 
   buildModules: [
     '@nuxt/typescript-build',
-    '@nuxtjs/dotenv',
     '@nuxtjs/google-analytics',
     '@nuxtjs/vuetify',
     '~/modules/plausible',
@@ -74,10 +70,6 @@ const config: NuxtConfig = {
 
   axios: {
     baseURL: '/',
-  },
-
-  dotenv: {
-    path: process.cwd(),
   },
 
   googleAnalytics: {
