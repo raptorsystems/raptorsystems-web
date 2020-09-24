@@ -5,7 +5,6 @@ import { theme } from './vuetify.options'
 dotenv.config()
 
 const config: NuxtConfig = {
-  mode: 'universal',
   target: 'static',
 
   srcDir: 'src',
