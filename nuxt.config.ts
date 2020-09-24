@@ -63,6 +63,7 @@ const config: NuxtConfig = {
     '@nuxtjs/dotenv',
     '@nuxtjs/google-analytics',
     '@nuxtjs/vuetify',
+    '~/modules/plausible',
   ],
 
   build: {
@@ -81,6 +82,10 @@ const config: NuxtConfig = {
 
   googleAnalytics: {
     id: process.env.GOOGLE_ID as string,
+  },
+
+  plausible: {
+    domain: process.env.DOMAIN ?? 'raptorsystems.cl',
   },
 
   vuetify: {
