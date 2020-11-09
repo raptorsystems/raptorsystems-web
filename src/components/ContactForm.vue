@@ -75,15 +75,11 @@
 
 <script lang="ts">
 import Vue from 'vue'
-
-// components
 import { ValidationObserver } from 'vee-validate'
-import ValidatedTextField from '~/components/ValidatedTextField.vue'
 
 export default Vue.extend({
   components: {
     ValidationObserver,
-    ValidatedTextField,
   },
   props: {
     email: { type: String, required: true },

@@ -221,17 +221,7 @@
 <script lang="ts">
 import Vue from 'vue'
 
-// components
-import ContactBtn from '~/components/ContactBtn.vue'
-import ContactForm from '~/components/ContactForm.vue'
-import SectionDivider from '~/components/SectionDivider.vue'
-
 export default Vue.extend({
-  components: {
-    ContactBtn,
-    ContactForm,
-    SectionDivider,
-  },
   data() {
     return {
       hero: {

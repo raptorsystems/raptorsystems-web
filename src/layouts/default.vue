@@ -47,15 +47,7 @@
 <script lang="ts">
 import Vue from 'vue'
 
-// components
-import ContactBtn from '~/components/ContactBtn.vue'
-import RaptorLogo from '~/components/RaptorLogo.vue'
-
 export default Vue.extend({
-  components: {
-    ContactBtn,
-    RaptorLogo,
-  },
   data() {
     return {
       currentScroll: 0,

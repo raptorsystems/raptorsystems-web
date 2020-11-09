@@ -6,6 +6,8 @@ const config: NuxtConfig = {
 
   srcDir: 'src',
 
+  components: true,
+
   head: {
     title: 'Raptor Systems – Desarrollo de Software en Antofagasta',
     meta: [

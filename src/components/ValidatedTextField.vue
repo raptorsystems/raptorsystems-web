@@ -18,8 +18,6 @@
 
 <script lang="ts">
 import Vue, { PropOptions } from 'vue'
-
-// components
 import { ValidationProvider } from 'vee-validate'
 
 export default Vue.extend({
