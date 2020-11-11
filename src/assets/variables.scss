@@ -6,9 +6,9 @@ $heading-font-family: 'Raleway', sans-serif;
 $font-size-root: 20px;
 
 $container-max-widths: (
-  'md': 600px,
-  'lg': 960px - 16px,
-  'xl': 1280px - 16px
+  'md': map-get($grid-breakpoints, 'sm') * 0.9375,
+  'lg': map-get($grid-breakpoints, 'md') * 0.9375,
+  'xl': map-get($grid-breakpoints, 'lg') * 0.9375,
 );
 
 $card-elevation: 0;
