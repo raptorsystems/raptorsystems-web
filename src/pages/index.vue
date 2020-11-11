@@ -85,6 +85,7 @@
             </v-col>
           </v-row>
           <ProjectRowCarreraAps />
+          <ProjectRowKryptoLedgers />
         </v-container>
       </v-sheet>
       <!-- divider -->
