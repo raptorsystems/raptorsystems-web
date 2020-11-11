@@ -4,18 +4,12 @@
     <header id="hero">
       <v-sheet color="primary" dark tile>
         <v-img
-          max-height="1200"
-          sizes="(max-width: 1920px) 100vw, 1920px"
-          srcset="
-            /images/hero,w_240.jpg 240w,
-            /images/hero,w_564.jpg 564w,
-            /images/hero,w_812.jpg 812w,
-            /images/hero,w_991.jpg 991w,
-            /images/hero,w_1158.jpg 1158w,
-            /images/hero,w_1324.jpg 1324w,
-            /images/hero,w_1463.jpg 1463w,
-            /images/hero,w_1920.jpg 1920w"
-          src="/images/hero,w_1920.jpg"
+          eager
+          contain
+          aspect-ratio="1.6"
+          max-height="800"
+          sizes="(max-width: 1280px) 100vw, 1280px"
+          v-bind="heroImage"
         >
           <v-container style="padding-top: 96px; padding-bottom: 128px">
             <v-row align-content="center" justify="end" class="text-md-right">
@@ -85,41 +79,12 @@
       <!-- content -->
       <v-sheet tile dark class="projects-bg">
         <v-container style="padding-top: 128px; padding-bottom: 192px">
-          <v-row class="mb-4">
+          <v-row>
             <v-col cols="12">
               <h2 class="text-h4 font-weight-thin">Nuestros proyectos</h2>
             </v-col>
           </v-row>
-          <v-row v-for="project in projects" :key="project.name">
-            <v-col :key="project.name" cols="12" lg="8">
-              <v-hover>
-                <template v-slot="{ hover }">
-                  <v-card
-                    max-width="800"
-                    :dark="hover"
-                    :elevation="hover ? 16 : 6"
-                  >
-                    <v-img v-bind="project.img" />
-                  </v-card>
-                </template>
-              </v-hover>
-            </v-col>
-            <v-col cols="12" lg="4">
-              <p class="text-h6">{{ project.name }}</p>
-              <p v-html="project.description"></p>
-              <v-btn
-                rounded
-                dark
-                color="white"
-                class="primary--text"
-                :href="project.link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                ver más
-              </v-btn>
-            </v-col>
-          </v-row>
+          <ProjectRowCarreraAps />
         </v-container>
       </v-sheet>
       <!-- divider -->
@@ -156,20 +121,10 @@
     <section id="contact">
       <v-sheet color="primary" dark tile>
         <v-img
-          max-height="1000"
+          aspect-ratio="1.7778"
+          max-height="900"
           sizes="(max-width: 1600px) 100vw, 1600px"
-          srcset="
-            /images/contact,w_240.jpg 240w,
-            /images/contact,w_479.jpg 479w,
-            /images/contact,w_654.jpg 654w,
-            /images/contact,w_788.jpg 788w,
-            /images/contact,w_898.jpg 898w,
-            /images/contact,w_1016.jpg 1016w,
-            /images/contact,w_1116.jpg 1116w,
-            /images/contact,w_1211.jpg 1211w,
-            /images/contact,w_1354.jpg 1354w,
-            /images/contact,w_1600.jpg 1600w,"
-          src="/images/contact,w_1600.jpg"
+          v-bind="contact.image"
         >
           <v-container
             class="fill-height"
@@ -221,6 +176,10 @@
 <script lang="ts">
 import Vue from 'vue'
 
+// images
+import contactImage from '~/assets/images/contact.jpg?resize&sizes[]=300&sizes[]=400&sizes[]=500&sizes[]=600&sizes[]=800&sizes[]=1000&sizes[]=1200&sizes[]=1400&sizes[]=1600'
+import heroImage from '~/assets/images/hero.jpg?resize&sizes[]=960&sizes[]=1280&sizes[]=1600&sizes[]=1920'
+
 export default Vue.extend({
   data() {
     return {
@@ -240,30 +199,6 @@ export default Vue.extend({
         {
           title: 'Páginas web',
           icon: '/icons/icons8-application-window.svg',
-        },
-      ],
-      projects: [
-        {
-          name: 'Carrera APS',
-          img: {
-            src: `/images/projects/carrera-aps,w_2846.jpg 2846w`,
-            sizes: `(max-width: 2846px) 100vw, 2846px`,
-            srcset: `
-              /images/projects/carrera-aps,w_240.jpg 240w,
-              /images/projects/carrera-aps,w_610.jpg 610w,
-              /images/projects/carrera-aps,w_869.jpg 869w,
-              /images/projects/carrera-aps,w_1133.jpg 1133w,
-              /images/projects/carrera-aps,w_1361.jpg 1361w,
-              /images/projects/carrera-aps,w_1593.jpg 1593w,
-              /images/projects/carrera-aps,w_1793.jpg 1793w,
-              /images/projects/carrera-aps,w_1952.jpg 1952w,
-              /images/projects/carrera-aps,w_2184.jpg 2184w,
-              /images/projects/carrera-aps,w_2366.jpg 2366w,
-              /images/projects/carrera-aps,w_2560.jpg 2560w,
-              /images/projects/carrera-aps,w_2846.jpg 2846w`,
-          },
-          description: `Es una solución que permite a los departamentos de salud municipales administrar de una manera amigable y eficiente la Carrera Funcionaria de la Ley&nbsp;19.378.`,
-          link: '//carrerafuncionaria.cl',
         },
       ],
       techs: [
@@ -286,8 +221,24 @@ export default Vue.extend({
       contact: {
         email: `contacto@raptorsystems.cl`,
         phones: ['+56 9 88901709', '+56 9 84306761'],
+        image: {
+          srcset: contactImage.srcSet,
+          src: contactImage.src,
+        },
       },
     }
+  },
+  computed: {
+    heroImage() {
+      return this.$vuetify.breakpoint.mdAndUp
+        ? {
+            srcset: heroImage.srcSet,
+            src: heroImage.src,
+          }
+        : {
+            gradient: '180deg, #235de5 15%, #05d5ff 70%, #a6ffcb 94%',
+          }
+    },
   },
 })
 </script>

@@ -61,6 +61,7 @@ const config: NuxtConfig = {
     '@nuxt/typescript-build',
     '@nuxtjs/google-analytics',
     '@nuxtjs/vuetify',
+    '@aceforth/nuxt-optimized-images',
     '~/modules/plausible',
   ],
 
@@ -76,6 +77,10 @@ const config: NuxtConfig = {
 
   googleAnalytics: {
     id: process.env.GOOGLE_ID as string,
+  },
+
+  optimizedImages: {
+    optimizeImages: true,
   },
 
   plausible: {
