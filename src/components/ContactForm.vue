@@ -5,12 +5,16 @@
       :name="formName"
       method="post"
       netlify="netlify"
-      netlify-honeypot="bot-field"
+      netlify-honeypot="asunto"
       @submit.prevent="submit(validate)"
     >
       <v-card class="pa-3 frosted" elevation="6">
         <v-card-text>
-          <v-text-field v-show="false" name="bot-field"></v-text-field>
+          <v-text-field
+            v-show="false"
+            label="asunto"
+            name="asunto"
+          ></v-text-field>
           <ValidatedTextField
             v-model="form.nombre"
             rules="required"
