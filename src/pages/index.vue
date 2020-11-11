@@ -55,17 +55,10 @@
           </v-row>
           <v-row justify="space-between">
             <v-col v-for="(item, idx) in services" :key="idx" cols="12" sm="4">
-              <v-hover>
-                <template v-slot="{ hover }">
-                  <v-card
-                    class="py-8 text-center fill-height"
-                    :elevation="hover ? 12 : 0"
-                  >
-                    <v-img :src="item.icon" height="92" contain />
-                    <div class="pt-6 text-h6">{{ item.title }}</div>
-                  </v-card>
-                </template>
-              </v-hover>
+              <v-card class="py-8 text-center fill-height" rounded="lg" hover>
+                <v-img :src="item.icon" height="92" contain />
+                <div class="pt-6 text-h6">{{ item.title }}</div>
+              </v-card>
             </v-col>
           </v-row>
         </v-container>

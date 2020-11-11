@@ -8,7 +8,7 @@
       netlify-honeypot="asunto"
       @submit.prevent="submit(validate)"
     >
-      <v-card class="pa-3 frosted" elevation="6">
+      <v-card class="pa-3 frosted" rounded="xl" elevation="6">
         <v-card-text>
           <v-text-field
             v-show="false"
