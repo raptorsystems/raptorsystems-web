@@ -96,14 +96,14 @@
               </h2>
             </v-col>
           </v-row>
-          <v-row justify="space-around">
+          <v-row justify="center">
             <v-img
               v-for="tech in techs"
               :key="tech"
               :src="`icons/tech/${tech}.svg`"
-              class="mx-2 my-4"
-              width="80"
-              height="60"
+              class="ma-4 shrink"
+              width="64"
+              height="64"
               contain
             />
           </v-row>
