@@ -102,5 +102,13 @@ tmp-resolvers
 # tsbuildinfo
 *.tsbuildinfo
 
+# Yarn 2 Zero-Installs
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+
 # .ideas
 ideas.md
