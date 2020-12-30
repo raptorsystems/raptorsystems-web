@@ -1,7 +1,7 @@
 <template>
   <svg
     :height="height"
-    :class="{ bottom: !top }"
+    :class="direction"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 100 100"
     preserveAspectRatio="none"
@@ -30,6 +30,9 @@ export default Vue.extend({
       if (this.top) return '0,0 100,0 100,100'
       return '0,100 100,0 100,100'
     },
+    direction(): 'top' | 'bottom' | undefined {
+      return this.top ? 'top' : this.bottom ? 'bottom' : undefined
+    },
   },
 })
 </script>
@@ -40,7 +43,11 @@ svg {
   width: 100%;
   left: 0;
 }
+.top {
+  margin-top: -1px;
+}
 .bottom {
   bottom: 0;
+  margin-bottom: -1px;
 }
 </style>
