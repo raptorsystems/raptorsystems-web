@@ -1,169 +1,156 @@
 <template>
   <div class="text-center text-md-left">
     <!-- Hero -->
-    <header id="hero">
-      <v-sheet color="primary" dark tile>
-        <v-img
-          eager
-          contain
-          aspect-ratio="1.6"
-          max-height="800"
-          sizes="(max-width: 1280px) 100vw, 1280px"
-          v-bind="heroImage"
-        >
-          <v-container style="padding-top: 96px; padding-bottom: 128px">
-            <v-row align-content="center" justify="end" class="text-md-right">
-              <v-col cols="12" lg="6">
-                <h1 class="text-h4">
-                  {{ hero.title }}
-                </h1>
-                <div
-                  class="my-6"
-                  :class="{
-                    'primary--text text--lighten-5':
-                      $vuetify.breakpoint.lgAndUp,
-                  }"
-                >
-                  {{ hero.tagline }}
-                </div>
-                <ContactBtn
-                  x-large
-                  rounded
-                  dark
-                  color="white"
-                  class="primary--text"
-                >
-                  hablemos
-                </ContactBtn>
-              </v-col>
-            </v-row>
-          </v-container>
-        </v-img>
-      </v-sheet>
-      <!-- divider -->
-      <SectionDivider height="128"></SectionDivider>
-    </header>
-
-    <!-- Services -->
-    <section id="services">
-      <v-sheet tile>
-        <v-container style="padding-top: 92px; padding-bottom: 128px">
-          <v-row>
-            <v-col cols="12">
-              <h2 class="text-h4 font-weight-thin">Servicios</h2>
-            </v-col>
-          </v-row>
-          <v-row justify="space-between">
-            <v-col v-for="(item, idx) in services" :key="idx" cols="12" sm="4">
-              <v-card class="py-8 text-center fill-height" rounded="lg" hover>
-                <v-img :src="item.icon" height="92" contain />
-                <div class="pt-6 text-h6">{{ item.title }}</div>
-              </v-card>
+    <v-sheet id="hero" tag="header" color="primary" dark tile>
+      <v-img
+        eager
+        contain
+        aspect-ratio="1.6"
+        max-height="800"
+        sizes="(max-width: 1280px) 100vw, 1280px"
+        v-bind="heroImage"
+      >
+        <v-container style="padding-top: 96px; padding-bottom: 128px">
+          <v-row align-content="center" justify="end" class="text-md-right">
+            <v-col cols="12" lg="6">
+              <h1 class="text-h4">
+                {{ hero.title }}
+              </h1>
+              <div
+                class="my-6"
+                :class="{
+                  'primary--text text--lighten-5': $vuetify.breakpoint.lgAndUp,
+                }"
+              >
+                {{ hero.tagline }}
+              </div>
+              <ContactBtn
+                x-large
+                rounded
+                dark
+                color="white"
+                class="primary--text"
+              >
+                hablemos
+              </ContactBtn>
             </v-col>
           </v-row>
         </v-container>
-      </v-sheet>
-    </section>
+      </v-img>
+      <!-- divider -->
+      <SectionDivider height="128"></SectionDivider>
+    </v-sheet>
+
+    <!-- Services -->
+    <v-sheet id="services" tag="section" tile>
+      <v-container style="padding-top: 92px; padding-bottom: 128px">
+        <v-row>
+          <v-col cols="12">
+            <h2 class="text-h4 font-weight-thin">Servicios</h2>
+          </v-col>
+        </v-row>
+        <v-row justify="space-between">
+          <v-col v-for="(item, idx) in services" :key="idx" cols="12" sm="4">
+            <v-card class="py-8 text-center fill-height" rounded="lg" hover>
+              <v-img :src="item.icon" height="92" contain />
+              <div class="pt-6 text-h6">{{ item.title }}</div>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-sheet>
 
     <!-- Projects -->
-    <section id="projects">
+    <v-sheet id="projects" tag="section" tile dark class="projects-bg">
       <!-- divider -->
       <SectionDivider top height="64"></SectionDivider>
       <!-- content -->
-      <v-sheet tile dark class="projects-bg">
-        <v-container style="padding-top: 128px; padding-bottom: 192px">
-          <v-row>
-            <v-col cols="12">
-              <h2 class="text-h4 font-weight-thin">Nuestros proyectos</h2>
-            </v-col>
-          </v-row>
-          <ProjectRowCarreraAps />
-          <ProjectRowKryptoLedgers />
-        </v-container>
-      </v-sheet>
+      <v-container style="padding-top: 128px; padding-bottom: 192px">
+        <v-row>
+          <v-col cols="12">
+            <h2 class="text-h4 font-weight-thin">Nuestros proyectos</h2>
+          </v-col>
+        </v-row>
+        <ProjectRowCarreraAps />
+        <ProjectRowKryptoLedgers />
+      </v-container>
       <!-- divider -->
       <SectionDivider height="128"></SectionDivider>
-    </section>
+    </v-sheet>
 
     <!-- Tech -->
-    <section id="tech">
-      <v-sheet tile>
-        <v-container style="padding-top: 128px; padding-bottom: 160px">
-          <v-row class="mb-6">
-            <v-col cols="12">
-              <h2 class="text-h4 font-weight-thin">
-                Tecnologías que utilizamos
-              </h2>
-            </v-col>
-          </v-row>
-          <v-row justify="center">
-            <v-img
-              v-for="tech in techs"
-              :key="tech"
-              :src="`icons/tech/${tech}.svg`"
-              class="ma-4 shrink"
-              width="64"
-              height="64"
-              contain
-            />
-          </v-row>
-        </v-container>
-      </v-sheet>
-    </section>
+    <v-sheet id="tech" tag="section" tile>
+      <v-container style="padding-top: 128px; padding-bottom: 160px">
+        <v-row class="mb-6">
+          <v-col cols="12">
+            <h2 class="text-h4 font-weight-thin">Tecnologías que utilizamos</h2>
+          </v-col>
+        </v-row>
+        <v-row justify="center">
+          <v-img
+            v-for="tech in techs"
+            :key="tech"
+            :src="`icons/tech/${tech}.svg`"
+            class="ma-4 shrink"
+            width="64"
+            height="64"
+            contain
+          />
+        </v-row>
+      </v-container>
+    </v-sheet>
 
     <!-- Contact -->
-    <section id="contact">
-      <v-sheet color="primary" dark tile>
-        <v-img
-          aspect-ratio="1.7778"
-          max-height="900"
-          sizes="(max-width: 1600px) 100vw, 1600px"
-          v-bind="contact.image"
+    <v-sheet id="contact" tag="section" color="primary" dark tile>
+      <v-img
+        aspect-ratio="1.7778"
+        max-height="900"
+        sizes="(max-width: 1600px) 100vw, 1600px"
+        v-bind="contact.image"
+      >
+        <v-container
+          class="fill-height"
+          style="padding-top: 64px; padding-bottom: 64px"
         >
-          <v-container
-            class="fill-height"
-            style="padding-top: 64px; padding-bottom: 64px"
-          >
-            <v-row>
-              <!-- form -->
-              <v-col cols="12" lg="6" class="px-4" order="2" order-lg="1">
-                <ContactForm :email="contact.email" />
-              </v-col>
-              <!-- info -->
-              <v-col cols="12" lg="6" order="1" order-lg="2">
-                <!-- title -->
-                <h2 class="pb-4 text-h4 font-weight-thin">Contáctanos</h2>
-                <v-list class="transparent">
-                  <!-- phones -->
-                  <v-list-item
-                    v-for="(phone, idx) in contact.phones"
-                    :key="idx"
-                    class="px-2"
-                    :href="`tel:${phone}`"
-                  >
-                    <v-list-item-action>
-                      <v-icon>$mdiWhatsapp</v-icon>
-                    </v-list-item-action>
-                    <v-list-item-title class="text-left">
-                      {{ phone }}
-                    </v-list-item-title>
-                  </v-list-item>
-                  <!-- email -->
-                  <v-list-item class="px-2" :href="`mailto:${contact.email}`">
-                    <v-list-item-action>
-                      <v-icon>$mdiEmail</v-icon>
-                    </v-list-item-action>
-                    <v-list-item-title class="text-left">
-                      {{ contact.email }}
-                    </v-list-item-title>
-                  </v-list-item>
-                </v-list>
-              </v-col>
-            </v-row>
-          </v-container>
-        </v-img>
-      </v-sheet>
-    </section>
+          <v-row>
+            <!-- form -->
+            <v-col cols="12" lg="6" class="px-4" order="2" order-lg="1">
+              <ContactForm :email="contact.email" />
+            </v-col>
+            <!-- info -->
+            <v-col cols="12" lg="6" order="1" order-lg="2">
+              <!-- title -->
+              <h2 class="pb-4 text-h4 font-weight-thin">Contáctanos</h2>
+              <v-list class="transparent">
+                <!-- phones -->
+                <v-list-item
+                  v-for="(phone, idx) in contact.phones"
+                  :key="idx"
+                  class="px-2"
+                  :href="`tel:${phone}`"
+                >
+                  <v-list-item-action>
+                    <v-icon>$mdiWhatsapp</v-icon>
+                  </v-list-item-action>
+                  <v-list-item-title class="text-left">
+                    {{ phone }}
+                  </v-list-item-title>
+                </v-list-item>
+                <!-- email -->
+                <v-list-item class="px-2" :href="`mailto:${contact.email}`">
+                  <v-list-item-action>
+                    <v-icon>$mdiEmail</v-icon>
+                  </v-list-item-action>
+                  <v-list-item-title class="text-left">
+                    {{ contact.email }}
+                  </v-list-item-title>
+                </v-list-item>
+              </v-list>
+            </v-col>
+          </v-row>
+        </v-container>
+      </v-img>
+    </v-sheet>
   </div>
 </template>
 
