@@ -34,6 +34,8 @@ module.exports = {
   rules: {
     // @typescript-eslint
     '@typescript-eslint/camelcase': 'off',
+    // vue
+    'vue/html-self-closing': ['error', { html: { void: 'always' } }],
     // vuetify
     'vuetify/no-deprecated-classes': 'error',
     'vuetify/grid-unknown-attributes': 'error',

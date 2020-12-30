@@ -4,7 +4,7 @@
     aria-label="CONTÁCTANOS"
     @click="$vuetify.goTo('#contact')"
   >
-    <slot></slot>
+    <slot />
   </v-btn>
 </template>
 

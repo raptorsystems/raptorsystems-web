@@ -12,7 +12,7 @@
       :success="passed"
       v-bind="$attrs"
       v-on="$listeners"
-    ></v-text-field>
+    />
   </ValidationProvider>
 </template>
 

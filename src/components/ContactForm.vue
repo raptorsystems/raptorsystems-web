@@ -10,18 +10,14 @@
     >
       <v-card class="pa-3 frosted" rounded="xl" elevation="6">
         <v-card-text>
-          <v-text-field
-            v-show="false"
-            label="asunto"
-            name="asunto"
-          ></v-text-field>
+          <v-text-field v-show="false" label="asunto" name="asunto" />
           <ValidatedTextField
             v-model="form.nombre"
             rules="required"
             name="nombre"
             label="Nombre"
             append-icon="$mdiAccount"
-          ></ValidatedTextField>
+          />
           <ValidatedTextField
             v-model="form.email"
             rules="required|email"
@@ -29,22 +25,22 @@
             label="Email"
             type="email"
             append-icon="$mdiEmail"
-          ></ValidatedTextField>
+          />
           <v-text-field
             v-model="form.telefono"
             name="telefono"
             label="Teléfono"
             append-icon="$mdiPhone"
-          ></v-text-field>
+          />
           <v-textarea
             v-model="form.mensaje"
             name="mensaje"
             label="Mensaje"
             auto-grow
-          ></v-textarea>
+          />
         </v-card-text>
         <v-card-actions>
-          <v-spacer></v-spacer>
+          <v-spacer />
           <v-btn
             large
             rounded
@@ -57,12 +53,12 @@
             >enviar
             <v-icon right>$mdiSend</v-icon>
           </v-btn>
-          <v-spacer></v-spacer>
+          <v-spacer />
         </v-card-actions>
       </v-card>
     </v-form>
     <v-snackbar bottom v-bind="snackbar">
-      <div v-html="snackbar.text"></div>
+      <div v-html="snackbar.text" />
       <template #action="{ attrs }">
         <v-btn
           v-bind="attrs"

@@ -7,8 +7,8 @@
       :scroll-threshold="scrollThreshold"
       :color="appBarColor"
     >
-      <RaptorLogo :dark="!isScrolled" :height="42"></RaptorLogo>
-      <v-spacer></v-spacer>
+      <RaptorLogo :dark="!isScrolled" :height="42" />
+      <v-spacer />
       <ContactBtn
         v-if="$vuetify.breakpoint.smAndUp"
         depressed
@@ -23,7 +23,7 @@
     </v-app-bar>
 
     <v-main>
-      <nuxt></nuxt>
+      <nuxt />
     </v-main>
 
     <v-footer id="footer" height="400" color="transparent">
@@ -32,7 +32,7 @@
         align="center"
         justify="space-around"
       >
-        <RaptorLogo :height="80"></RaptorLogo>
+        <RaptorLogo :height="80" />
         <div class="text-body-2 font-weight-light">
           Copyright &copy; {{ currentYear }} Raptor Systems SpA
         </div>

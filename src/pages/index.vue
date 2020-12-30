@@ -38,7 +38,7 @@
         </v-container>
       </v-img>
       <!-- divider -->
-      <SectionDivider height="128"></SectionDivider>
+      <SectionDivider height="128" />
     </v-sheet>
 
     <!-- Services -->
@@ -63,7 +63,7 @@
     <!-- Projects -->
     <v-sheet id="projects" tag="section" tile dark class="projects-bg">
       <!-- divider -->
-      <SectionDivider top height="64"></SectionDivider>
+      <SectionDivider top height="64" />
       <!-- content -->
       <v-container style="padding-top: 128px; padding-bottom: 192px">
         <v-row>
@@ -75,7 +75,7 @@
         <ProjectRowKryptoLedgers />
       </v-container>
       <!-- divider -->
-      <SectionDivider height="128"></SectionDivider>
+      <SectionDivider height="128" />
     </v-sheet>
 
     <!-- Tech -->
