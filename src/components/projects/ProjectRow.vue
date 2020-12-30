@@ -1,5 +1,5 @@
 <template>
-  <v-row class="py-4">
+  <v-row class="py-4 my-0">
     <v-col cols="12" lg="8" class="pr-lg-6">
       <p v-if="$vuetify.breakpoint.mdAndDown" class="text-h6">
         <slot name="title">{{ title }}</slot>
