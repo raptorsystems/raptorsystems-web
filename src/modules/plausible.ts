@@ -22,7 +22,9 @@ const plausible: Module<PlausibleOptions> = function (moduleOptions) {
     // only if enabled
     options.enabled &&
     // only if we got the domain
-    options.domain
+    options.domain &&
+    // only if head is not a function
+    typeof this.options.head !== 'function'
   ) {
     this.options.head.script = this.options.head.script || []
     this.options.head.script.push({
