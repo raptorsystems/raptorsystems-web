@@ -36,7 +36,6 @@
     </v-col>
   </v-row>
 </template>
-ver más
 
 <script lang="ts">
 import Vue from 'vue'
