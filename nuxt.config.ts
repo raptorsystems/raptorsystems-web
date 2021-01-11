@@ -46,7 +46,6 @@ const config: NuxtConfig = {
       description: `Creamos software enfocado en solucionar los problemas de tus clientes, cuenta con nosotros como partner tecnológico en Antofagasta.`,
       display: 'browser',
       lang: 'es-CL',
-      author: 'Raptor Systems',
     },
   },
 
