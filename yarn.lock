@@ -5,16 +5,16 @@ __metadata:
   version: 4
   cacheKey: 7
 
-"@aceforth/nuxt-optimized-images@npm:^1.3.0":
-  version: 1.3.0
-  resolution: "@aceforth/nuxt-optimized-images@npm:1.3.0"
+"@aceforth/nuxt-optimized-images@npm:^1.4.0":
+  version: 1.4.0
+  resolution: "@aceforth/nuxt-optimized-images@npm:1.4.0"
   dependencies:
     consola: ^2.15.0
     imagemin: ^7.0.1
-    img-loader: ^3.0.1
-    raw-loader: ^4.0.1
-    url-loader: ^4.1.0
-  checksum: 7e45c8c6b3aecf72d1ead04252d838f432e10801d9124e36f97a339c65ed9dc59a1031608f37345ee47e8e3a5c8854fc8cfc6ff4774f60184d76ac2b9c636a2f
+    img-loader: ^3.0.2
+    raw-loader: ^4.0.2
+    url-loader: ^4.1.1
+  checksum: 8dffa5b488a5dbfd6c3d4e652246058ca65c848b1a48027f9434d4c7af26f12eb8e4e042cfb197c18944cb040a8f2c3d7c41b0c90b143423a554aee08292f649
   languageName: node
   linkType: hard
 
@@ -1816,16 +1816,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxtjs/axios@npm:^5.12.4":
-  version: 5.12.4
-  resolution: "@nuxtjs/axios@npm:5.12.4"
+"@nuxtjs/axios@npm:^5.12.5":
+  version: 5.12.5
+  resolution: "@nuxtjs/axios@npm:5.12.5"
   dependencies:
     "@nuxtjs/proxy": ^2.1.0
-    axios: ^0.21.0
+    axios: ^0.21.1
     axios-retry: ^3.1.9
     consola: ^2.15.0
     defu: ^3.2.2
-  checksum: 17de2da4ca9e61490df889a0572b1d832f50875a4b316029d9e224445ef72b5bb763edd68f64c07c42e9cb804ce582a553337431109b70743768a51ed0879848
+  checksum: 1215b0f3f5a62bad63553a68924de8ecd1a3db570a66f450d2bba3a8478079b52fd6a0afcb41080c0789db79039709451b16941deb4672b5dc7119eb99cd0c6e
   languageName: node
   linkType: hard
 
@@ -1876,9 +1876,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxtjs/pwa@npm:^3.3.3":
-  version: 3.3.3
-  resolution: "@nuxtjs/pwa@npm:3.3.3"
+"@nuxtjs/pwa@npm:^3.3.4":
+  version: 3.3.4
+  resolution: "@nuxtjs/pwa@npm:3.3.4"
   dependencies:
     clone-deep: ^4.0.1
     defu: ^3.2.2
@@ -1889,7 +1889,7 @@ __metadata:
     lodash.template: ^4.5.0
     serve-static: ^1.14.1
     workbox-cdn: ^5.1.4
-  checksum: b2b9608ff4c3c30dee505a0480c1b595c0cc31221e9710f91656ad85b2791b4703f95d265b55d3dabf0ac1b28c07b059ec7a7431a79389d4cdad9e87b532beec
+  checksum: 05e718ee4aac4f8ef57ed088e00791e0745a821a3db830b2cb7a4470d1e0da809477b73d5d5945a9ed2cf7ba98c9177ed24fcc022ccb5d7b3083103e4642a05e
   languageName: node
   linkType: hard
 
@@ -1908,19 +1908,19 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@raptorsystems/web@workspace:."
   dependencies:
-    "@aceforth/nuxt-optimized-images": ^1.3.0
+    "@aceforth/nuxt-optimized-images": ^1.4.0
     "@darrgaeon/vuetify": ^1.11.5
     "@mdi/js": ^5.8.55
     "@nuxt/types": ^2.14.12
     "@nuxt/typescript-build": ^2.0.3
     "@nuxt/typescript-runtime": ^2.0.0
-    "@nuxtjs/axios": ^5.12.4
+    "@nuxtjs/axios": ^5.12.5
     "@nuxtjs/eslint-config-typescript": ^5.0.0
     "@nuxtjs/google-analytics": ^2.4.0
-    "@nuxtjs/pwa": ^3.3.3
-    eslint: ^7.16.0
+    "@nuxtjs/pwa": ^3.3.4
+    eslint: ^7.17.0
     eslint-config-prettier: ^7.1.0
-    eslint-plugin-prettier: 3.3.0
+    eslint-plugin-prettier: 3.3.1
     eslint-plugin-vuetify: ^1.0.0-beta.7
     imagemin-mozjpeg: ^9.0.0
     lqip-loader: ^2.2.1
@@ -1930,7 +1930,7 @@ __metadata:
     responsive-loader: ^2.3.0
     sharp: ^0.27.0
     vee-validate: ^3.4.5
-    vuetify: ^2.4.0
+    vuetify: ^2.4.2
   languageName: unknown
   linkType: soft
 
@@ -3280,7 +3280,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^0.21.0":
+"axios@npm:^0.21.1":
   version: 0.21.1
   resolution: "axios@npm:0.21.1"
   dependencies:
@@ -5838,18 +5838,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-prettier@npm:3.3.0":
-  version: 3.3.0
-  resolution: "eslint-plugin-prettier@npm:3.3.0"
+"eslint-plugin-prettier@npm:3.3.1":
+  version: 3.3.1
+  resolution: "eslint-plugin-prettier@npm:3.3.1"
   dependencies:
     prettier-linter-helpers: ^1.0.0
   peerDependencies:
     eslint: ">=5.0.0"
     prettier: ">=1.13.0"
   peerDependenciesMeta:
-    eslint-plugin-prettier:
+    eslint-config-prettier:
       optional: true
-  checksum: d79ea6ed414f861d0b84818b9a3f7ac40f67998918d3a0c27e9d82f097768aeae8211f382cc5f9b059f4bdb417d098c8250ea8a552e6e18c904a961eb2b21681
+  checksum: cf35b0f0e9ef30782fe82913db92f6874181723d77f0c4613f9d69c87069f73d0dc420ef850ebc844613c00a8e87eb9762a36b7d028334c5c7b091763118347b
   languageName: node
   linkType: hard
 
@@ -5976,9 +5976,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^7.16.0":
-  version: 7.16.0
-  resolution: "eslint@npm:7.16.0"
+"eslint@npm:^7.17.0":
+  version: 7.17.0
+  resolution: "eslint@npm:7.17.0"
   dependencies:
     "@babel/code-frame": ^7.0.0
     "@eslint/eslintrc": ^0.2.2
@@ -6019,7 +6019,7 @@ __metadata:
     v8-compile-cache: ^2.0.3
   bin:
     eslint: bin/eslint.js
-  checksum: facdebbce95f7812b026cae955f22863e0850584c8b4ab6daefa555f48b38a8b3d62c1857c0eeebe52218c49345853f516209b300c6747ea89d6f88ef495a56d
+  checksum: 12b09a972eb0b81fabf9c1b38b3e9ada0cc051a22ee5022e31852e7babde6fe02a0135be3027451ee02c9ff4a6f738b55205d2953f98eb16a43350ad73070b27
   languageName: node
   linkType: hard
 
@@ -7759,7 +7759,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"img-loader@npm:^3.0.1":
+"img-loader@npm:^3.0.2":
   version: 3.0.2
   resolution: "img-loader@npm:3.0.2"
   dependencies:
@@ -11818,7 +11818,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"raw-loader@npm:^4.0.1":
+"raw-loader@npm:^4.0.2":
   version: 4.0.2
   resolution: "raw-loader@npm:4.0.2"
   dependencies:
@@ -14128,7 +14128,7 @@ typescript@~4.0:
   languageName: node
   linkType: hard
 
-"url-loader@npm:^4.1.0":
+"url-loader@npm:^4.1.1":
   version: 4.1.1
   resolution: "url-loader@npm:4.1.1"
   dependencies:
@@ -14466,12 +14466,12 @@ typescript@~4.0:
   languageName: node
   linkType: hard
 
-"vuetify@npm:^2, vuetify@npm:^2.4.0":
-  version: 2.4.0
-  resolution: "vuetify@npm:2.4.0"
+"vuetify@npm:^2, vuetify@npm:^2.4.2":
+  version: 2.4.2
+  resolution: "vuetify@npm:2.4.2"
   peerDependencies:
     vue: ^2.6.4
-  checksum: 2e7380c0edaac14de94d65fcffa93eae097afd00bf492fb2a8513056d82f90299582f03867ee35e5701b8503ff2333ce5754fcf69a1bb8698d2f0ebcd28010e6
+  checksum: 5947b92c6f983eed104c535e9996b6552a8e3097b79a201456d2028a7cfe5ee2fd4c037e85b2af3f10d75186ad039d02fb12804b3adc0d75e002eef9cb5ab6ce
   languageName: node
   linkType: hard
 
