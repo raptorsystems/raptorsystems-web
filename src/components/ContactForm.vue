@@ -58,7 +58,16 @@
       </v-card>
     </v-form>
     <v-snackbar bottom v-bind="snackbar">
-      <div v-html="snackbar.text" />
+      <template v-if="snackbar.success">
+        Mensaje enviado 📨<br />pronto te contactaremos!
+      </template>
+      <template v-else>
+        No fue posible enviar el mensaje 😞<br />
+        envíanos un email directamente a:<br />
+        <a class="font-weight-bold" :href="`mailto:${email}`">
+          {{ email }}
+        </a>
+      </template>
       <template #action="{ attrs }">
         <v-btn
           v-bind="attrs"
@@ -90,6 +99,7 @@ export default Vue.extend({
       snackbar: {
         value: false,
         timeout: -1,
+        success: true,
         text: '',
       },
       form: {
@@ -117,18 +127,12 @@ export default Vue.extend({
     },
     showSuccess(): void {
       this.closeSnackbar()
-      this.snackbar.text = `
-        Mensaje enviado 📨<br>pronto te contactaremos!
-      `
+      this.snackbar.success = true
       this.showSnackbar()
     },
     showFailure(): void {
       this.closeSnackbar()
-      this.snackbar.text = `
-        No fue posible enviar el mensaje 😞<br>
-        envíanos un email directamente a:<br>
-        <a class='font-weight-bold' href='mailto:${this.email}'>${this.email}</a>
-      `
+      this.snackbar.success = false
       this.showSnackbar()
     },
     async submit(
