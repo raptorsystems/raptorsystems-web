@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
     /* Basic Options */
-    "target": "es2019",
-    "module": "esnext",
-    "lib": ["es2019", "esnext.asynciterable", "dom"],
+    "target": "ES2020",
+    "module": "ESNext",
+    "lib": ["ESNext", "ESNext.AsyncIterable", "DOM"],
     "allowJs": true,
     "sourceMap": true,
     "outDir": "dist",
@@ -13,7 +13,7 @@
     "strict": true,
 
     /* Module Resolution Options */
-    "moduleResolution": "node",
+    "moduleResolution": "Node",
     "baseUrl": ".",
     "paths": {
       "~/*": ["src/*"],
