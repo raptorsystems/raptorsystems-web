@@ -1207,19 +1207,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@darrgaeon/vuetify@npm:^1.11.5":
-  version: 1.11.5
-  resolution: "@darrgaeon/vuetify@npm:1.11.5"
-  dependencies:
-    deepmerge: ^4.2.2
-    sass: ^1.26.5
-    sass-loader: ^8.0.2
-    vuetify: ^2
-    vuetify-loader: ^1.4.3
-  checksum: c528b0e1cb17f10bfe7348d4f094135487954660dbbbc069f7e0f67b592c8cebfb84caddcfa3b71b7bb16c7c24cdde8b37ea1e8260c7b55bedf96ed1419d3aa4
-  languageName: node
-  linkType: hard
-
 "@eslint/eslintrc@npm:^0.2.2":
   version: 0.2.2
   resolution: "@eslint/eslintrc@npm:0.2.2"
@@ -1893,6 +1880,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nuxtjs/vuetify@npm:^1.11.3":
+  version: 1.11.3
+  resolution: "@nuxtjs/vuetify@npm:1.11.3"
+  dependencies:
+    deepmerge: ^4.2.2
+    sass: ^1.32.4
+    sass-loader: ^10.1.1
+    vuetify: ^2.4.2
+    vuetify-loader: ^1.6.0
+  checksum: 553cc83186c3da7deaca4962cd690378f0686dde48838f2888bae312e33d5944ac1d7b5218066e4f291c435ae8f02fda6d0c45a3dacc6f342cf7681e87dd7883
+  languageName: node
+  linkType: hard
+
 "@nuxtjs/youch@npm:^4.2.3":
   version: 4.2.3
   resolution: "@nuxtjs/youch@npm:4.2.3"
@@ -1909,7 +1909,6 @@ __metadata:
   resolution: "@raptorsystems/web@workspace:."
   dependencies:
     "@aceforth/nuxt-optimized-images": ^1.4.0
-    "@darrgaeon/vuetify": ^1.11.5
     "@mdi/js": ^5.8.55
     "@nuxt/types": ^2.14.12
     "@nuxt/typescript-build": ^2.0.3
@@ -1918,6 +1917,7 @@ __metadata:
     "@nuxtjs/eslint-config-typescript": ^5.0.0
     "@nuxtjs/google-analytics": ^2.4.0
     "@nuxtjs/pwa": ^3.3.4
+    "@nuxtjs/vuetify": ^1.11.3
     eslint: ^7.17.0
     eslint-config-prettier: ^7.1.0
     eslint-plugin-prettier: 3.3.1
@@ -3929,6 +3929,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"callsite@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "callsite@npm:1.0.0"
+  checksum: 5940b23533433f4886dea106cdb16d8a511b36ebaf2ac0bbe0adae547a4259f142d37074f864e12f424927b50cf364fffd1fd75d45a62a622d22984d2375e859
+  languageName: node
+  linkType: hard
+
 "callsites@npm:^2.0.0":
   version: 2.0.0
   resolution: "callsites@npm:2.0.0"
@@ -5025,6 +5032,15 @@ __metadata:
     supports-color:
       optional: true
   checksum: 847d2760d1493cfaef53fb67d8943c6afaba30472d7527450c19919d230dde04f2275dd8dd5c2874c7103787c190d3b5d3dbc2ee7596a12d853a2ce35c4b8b1b
+  languageName: node
+  linkType: hard
+
+"decache@npm:^4.6.0":
+  version: 4.6.0
+  resolution: "decache@npm:4.6.0"
+  dependencies:
+    callsite: ^1.0.0
+  checksum: f599e1cefae0a1d64d6f4b9d24bbe24ca467d752ba071225655352a8151188a16d5e46331f41aead3e8b9e7a14aa90010341c5490a2fd3b4fe48096e864a6c58
   languageName: node
   linkType: hard
 
@@ -6493,7 +6509,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"file-loader@npm:^4.0.0, file-loader@npm:^4.3.0":
+"file-loader@npm:^4.3.0":
   version: 4.3.0
   resolution: "file-loader@npm:4.3.0"
   dependencies:
@@ -6502,6 +6518,18 @@ __metadata:
   peerDependencies:
     webpack: ^4.0.0
   checksum: 03535f889b56836dc462f20e138ba5ad46893cc079cfb970b3434aa4d4e959a1e52770fa62e87d657f4d7d3dd9207726a464dee19eb82ccdafdc2e5c6a80f92a
+  languageName: node
+  linkType: hard
+
+"file-loader@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "file-loader@npm:6.2.0"
+  dependencies:
+    loader-utils: ^2.0.0
+    schema-utils: ^3.0.0
+  peerDependencies:
+    webpack: ^4.0.0 || ^5.0.0
+  checksum: 0f103418c072ec66c081a9908cd7824ee19905e18be16889cb050f5f373998afaf7ca4c2fd2df4cabf703a2cd526aefe59105930e3f8d266a5b35e6d5f5b3cf4
   languageName: node
   linkType: hard
 
@@ -8661,6 +8689,13 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"klona@npm:^2.0.4":
+  version: 2.0.4
+  resolution: "klona@npm:2.0.4"
+  checksum: be4a0c784135b6a75ac2c5ac9564894807aa050de041ac775a20d3ee46969ac5c3d37503d12c215c7decb592196e59e22852fd0cf28ac0cc29fe3a6df9168624
+  languageName: node
+  linkType: hard
+
 "last-call-webpack-plugin@npm:^3.0.0":
   version: 3.0.0
   resolution: "last-call-webpack-plugin@npm:3.0.0"
@@ -8755,7 +8790,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"loader-utils@npm:^1.0.2, loader-utils@npm:^1.1.0, loader-utils@npm:^1.2.0, loader-utils@npm:^1.2.3, loader-utils@npm:^1.4.0":
+"loader-utils@npm:^1.0.2, loader-utils@npm:^1.1.0, loader-utils@npm:^1.2.3, loader-utils@npm:^1.4.0":
   version: 1.4.0
   resolution: "loader-utils@npm:1.4.0"
   dependencies:
@@ -9576,7 +9611,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"neo-async@npm:^2.5.0, neo-async@npm:^2.6.0, neo-async@npm:^2.6.1":
+"neo-async@npm:^2.5.0, neo-async@npm:^2.6.0, neo-async@npm:^2.6.1, neo-async@npm:^2.6.2":
   version: 2.6.2
   resolution: "neo-async@npm:2.6.2"
   checksum: 34a8f5309135be258a97082af810ea43700a3e0121e7b1ea31b3e22e2663d7c0d502cd949abb6d1ab8c11abfd04500ee61721ec5408b2d4bef8105241fd8a4c2
@@ -12403,18 +12438,18 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"sass-loader@npm:^8.0.2":
-  version: 8.0.2
-  resolution: "sass-loader@npm:8.0.2"
+"sass-loader@npm:^10.1.1":
+  version: 10.1.1
+  resolution: "sass-loader@npm:10.1.1"
   dependencies:
-    clone-deep: ^4.0.1
-    loader-utils: ^1.2.3
-    neo-async: ^2.6.1
-    schema-utils: ^2.6.1
-    semver: ^6.3.0
+    klona: ^2.0.4
+    loader-utils: ^2.0.0
+    neo-async: ^2.6.2
+    schema-utils: ^3.0.0
+    semver: ^7.3.2
   peerDependencies:
     fibers: ">= 3.1.0"
-    node-sass: ^4.0.0
+    node-sass: ^4.0.0 || ^5.0.0
     sass: ^1.3.0
     webpack: ^4.36.0 || ^5.0.0
   peerDependenciesMeta:
@@ -12424,18 +12459,18 @@ fsevents@~2.1.2:
       optional: true
     sass:
       optional: true
-  checksum: e23d9b308f0792fb9ca3ebe314d5c9c96dfa833f89f457e4fc9c5026dacbfbb81e65b1e9b924f6aa11d749e2ba033acf7d1767929d6f9628c45525535bceb889
+  checksum: 725245f0259453fcc51c4a1012c484dda1340ebb10b9c461e2b3b4408105f5426ad5613282ad0861c1f32744533d8a584450b11daf42aa1237b04287f01223d4
   languageName: node
   linkType: hard
 
-"sass@npm:^1.26.5":
-  version: 1.29.0
-  resolution: "sass@npm:1.29.0"
+"sass@npm:^1.32.4":
+  version: 1.32.4
+  resolution: "sass@npm:1.32.4"
   dependencies:
     chokidar: ">=2.0.0 <4.0.0"
   bin:
     sass: sass.js
-  checksum: 8114e0c4e73be695d25030f51bff8da0151f335b135869e926d39e21688cd81a6be0368a332caec40425e64df499bd34962aa4ca59926a6bd0e11aa43ac306d9
+  checksum: d7ff2252fe702f122bb002f6b65a785213dd2e8c738b247b910d34c959a77215cce93655ceddd08ce1a7fecbb9fb6c376924d271fd9d9af036699d3076c2a4fd
   languageName: node
   linkType: hard
 
@@ -12468,7 +12503,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"schema-utils@npm:^2.0.0, schema-utils@npm:^2.5.0, schema-utils@npm:^2.6.1, schema-utils@npm:^2.6.5, schema-utils@npm:^2.6.6, schema-utils@npm:^2.7.0":
+"schema-utils@npm:^2.0.0, schema-utils@npm:^2.5.0, schema-utils@npm:^2.6.5, schema-utils@npm:^2.6.6, schema-utils@npm:^2.7.0":
   version: 2.7.1
   resolution: "schema-utils@npm:2.7.1"
   dependencies:
@@ -14452,21 +14487,22 @@ typescript@~4.0:
   languageName: node
   linkType: hard
 
-"vuetify-loader@npm:^1.4.3":
-  version: 1.6.0
-  resolution: "vuetify-loader@npm:1.6.0"
+"vuetify-loader@npm:^1.6.0":
+  version: 1.7.1
+  resolution: "vuetify-loader@npm:1.7.1"
   dependencies:
-    file-loader: ^4.0.0
-    loader-utils: ^1.2.0
+    decache: ^4.6.0
+    file-loader: ^6.2.0
+    loader-utils: ^2.0.0
   peerDependencies:
     vue-template-compiler: ^2.6.10
     vuetify: ^1.3.0 || ^2.0.0
-    webpack: ^4.0.0
-  checksum: 66d643b2a95d801c78475c8a966bf99ae2580cfacb7391045f8501aab4bbf8934b1d96d225189babdba173e1797f000ddd8f60e09552a6c0c9a98672581a29b9
+    webpack: ^4.0.0 || ^5.0.0
+  checksum: 2a0b1525f929a225f8a808863caa5d7057e314f2da63cf22c6b32a25bcb64c21175fafb0b413a957d0a40463f6d44d3256724028edc110b639f4abc7a33adda3
   languageName: node
   linkType: hard
 
-"vuetify@npm:^2, vuetify@npm:^2.4.2":
+"vuetify@npm:^2.4.2":
   version: 2.4.2
   resolution: "vuetify@npm:2.4.2"
   peerDependencies:

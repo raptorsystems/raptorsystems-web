@@ -58,7 +58,7 @@ const config: NuxtConfig = {
   buildModules: [
     '@nuxt/typescript-build',
     '@nuxtjs/google-analytics',
-    '@darrgaeon/vuetify',
+    '@nuxtjs/vuetify',
     '@aceforth/nuxt-optimized-images',
     '~/modules/plausible',
   ],
