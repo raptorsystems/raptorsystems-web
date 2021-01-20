@@ -48,14 +48,14 @@ export default Vue.extend({
     imgProps: { type: Object, default: () => ({}) },
   },
   computed: {
-    linkProps() {
+    linkProps(): { href: string; target: string; rel: string } | undefined {
       return this.link
         ? {
             href: this.link,
             target: '_blank',
             rel: 'noopener noreferrer',
           }
-        : {}
+        : undefined
     },
   },
 })
