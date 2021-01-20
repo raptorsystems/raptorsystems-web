@@ -1,3 +1,4 @@
+import '@nuxt/types'
 import '@nuxtjs/axios'
 import '@nuxtjs/google-analytics'
 import '@nuxtjs/pwa'
