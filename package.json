@@ -9,18 +9,17 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "dev": "nuxt-ts dev",
-    "build": "nuxt-ts build",
-    "start": "nuxt-ts start",
-    "generate": "nuxt-ts generate",
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
     "deploy": "netlify deploy -d=dist",
-    "analyze": "nuxt-ts build --analyze",
+    "analyze": "nuxt build --analyze",
     "lint": "eslint --ext .ts,.js,.vue src",
     "lint:fix": "eslint --fix --ext .ts,.js,.vue src",
     "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check"
   },
   "dependencies": {
-    "@nuxt/typescript-runtime": "^2.0.2",
     "@nuxtjs/axios": "^5.13.1",
     "@nuxtjs/pwa": "^3.3.5",
     "nuxt": "^2.15.2",
