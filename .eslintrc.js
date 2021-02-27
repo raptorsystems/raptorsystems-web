@@ -22,11 +22,7 @@ module.exports = {
     // https://typescript.nuxtjs.org/guide/lint.html#lint
     '@nuxtjs/eslint-config-typescript',
     // Prettier
-    // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#usage-with-prettier
-    'prettier',
-    'prettier/vue',
-    'prettier/@typescript-eslint',
-    'plugin:prettier/recommended', // Enables eslint-plugin-prettier and displays prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
+    'plugin:prettier/recommended',
   ],
 
   plugins: ['vuetify'],
