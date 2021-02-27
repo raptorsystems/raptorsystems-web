@@ -4,6 +4,7 @@
       v-scroll="onScroll"
       app
       elevate-on-scroll
+      height="64"
       :scroll-threshold="scrollThreshold"
       :color="appBarColor"
     >
