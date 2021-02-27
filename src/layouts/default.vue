@@ -9,16 +9,9 @@
     >
       <RaptorLogo :dark="!isScrolled" :height="42" />
       <v-spacer />
-      <ContactBtn
-        v-if="$vuetify.breakpoint.smAndUp"
-        depressed
-        rounded
-        color="primary"
-      >
-        contáctanos
-      </ContactBtn>
-      <ContactBtn v-else depressed rounded color="primary">
-        <v-icon>$mdiPhone</v-icon>
+      <ContactBtn depressed rounded color="primary">
+        <span v-if="$vuetify.breakpoint.lgAndUp">contáctanos</span>
+        <v-icon :right="$vuetify.breakpoint.lgAndUp">$mdiPhone</v-icon>
       </ContactBtn>
     </v-app-bar>
 
@@ -47,7 +40,15 @@
 <script lang="ts">
 import Vue from 'vue'
 
+// components
+import ContactBtn from '~/components/ContactBtn.vue'
+import RaptorLogo from '~/components/RaptorLogo.vue'
+
 export default Vue.extend({
+  components: {
+    ContactBtn,
+    RaptorLogo,
+  },
   data() {
     return {
       currentScroll: 0,

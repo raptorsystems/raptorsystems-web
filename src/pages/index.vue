@@ -115,7 +115,7 @@
           <v-row>
             <!-- form -->
             <v-col cols="12" lg="6" class="px-4" order="2" order-lg="1">
-              <ContactForm :email="contact.email" />
+              <LazyContactForm :email="contact.email" />
             </v-col>
             <!-- info -->
             <v-col cols="12" lg="6" order="1" order-lg="2">
@@ -161,7 +161,19 @@ import Vue from 'vue'
 import contactImage from '~/assets/images/contact.jpg?resize&sizes[]=300&sizes[]=400&sizes[]=500&sizes[]=600&sizes[]=800&sizes[]=1000&sizes[]=1200&sizes[]=1400&sizes[]=1600'
 import heroImage from '~/assets/images/hero.jpg?resize&sizes[]=960&sizes[]=1280&sizes[]=1600&sizes[]=1920'
 
+//  components
+import ContactBtn from '~/components/ContactBtn.vue'
+import SectionDivider from '~/components/SectionDivider.vue'
+import ProjectRowCarreraAps from '~/components/project/RowCarreraAps.vue'
+import ProjectRowKryptoLedgers from '~/components/project/RowKryptoLedgers.vue'
+
 export default Vue.extend({
+  components: {
+    ContactBtn,
+    SectionDivider,
+    ProjectRowCarreraAps,
+    ProjectRowKryptoLedgers,
+  },
   data() {
     return {
       hero: {

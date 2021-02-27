@@ -86,8 +86,12 @@
 import Vue from 'vue'
 import { ValidationObserver } from 'vee-validate'
 
+// components
+import ValidatedTextField from '~/components/ValidatedTextField.vue'
+
 export default Vue.extend({
   components: {
+    ValidatedTextField,
     ValidationObserver,
   },
   props: {
