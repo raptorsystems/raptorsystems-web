@@ -23,9 +23,11 @@ module.exports = {
     '@nuxtjs/eslint-config-typescript',
     // Prettier
     'plugin:prettier/recommended',
+
+    'plugin:jest-playwright/recommended',
   ],
 
-  plugins: ['vuetify'],
+  plugins: ['vuetify', 'jest'],
 
   rules: {
     // @typescript-eslint
