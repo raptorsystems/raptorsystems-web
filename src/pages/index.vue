@@ -87,15 +87,22 @@
           </v-col>
         </v-row>
         <v-row justify="center">
-          <v-img
-            v-for="tech in techs"
-            :key="tech"
-            :src="`icons/tech/${tech}.svg`"
-            class="ma-4 shrink"
-            width="64"
-            height="64"
-            contain
-          />
+          <a
+            v-for="([icon, url], idx) in techs"
+            :key="idx"
+            :href="url"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <v-img
+              :src="`icons/tech/${icon}.svg`"
+              class="ma-4 shrink"
+              width="64"
+              height="64"
+              aspect-ratio="1"
+              contain
+            />
+          </a>
         </v-row>
       </v-container>
     </v-sheet>
@@ -195,21 +202,24 @@ export default Vue.extend({
         },
       ],
       techs: [
-        'python',
-        'django',
-        'typescript-icon',
-        'nodejs-icon',
-        'html-5',
-        'css-3',
-        'vue',
-        'vuetifyjs',
-        'nuxt',
-        'aws',
-        'prisma',
-        'graphql',
-        'postgresql',
-        'redis',
-        'git-icon',
+        ['python', 'https://www.python.org/'],
+        ['django', 'https://www.djangoproject.com/'],
+        ['typescript-icon', 'https://www.typescriptlang.org/'],
+        ['nodejs-icon', 'https://nodejs.org/'],
+        [
+          'html-5',
+          'https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5',
+        ],
+        ['css-3', 'https://developer.mozilla.org/en-US/docs/Web/CSS'],
+        ['vue', 'https://vuejs.org/'],
+        ['vuetifyjs', 'https://vuetifyjs.com/'],
+        ['nuxt', 'https://nuxtjs.org/'],
+        ['aws', 'https://aws.amazon.com/'],
+        ['prisma', 'https://www.prisma.io/'],
+        ['graphql', 'https://graphql.org/'],
+        ['postgresql', 'https://www.postgresql.org/'],
+        ['redis', 'https://redis.io/'],
+        ['git-icon', 'https://git-scm.com/'],
       ],
       contact: {
         email: `contacto@raptorsystems.cl`,
