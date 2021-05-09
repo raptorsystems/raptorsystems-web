@@ -214,6 +214,7 @@ export default Vue.extend({
         ['vue', 'https://vuejs.org/'],
         ['vuetifyjs', 'https://vuetifyjs.com/'],
         ['nuxt', 'https://nuxtjs.org/'],
+        ['tailwindcss-icon', 'https://tailwindcss.com/'],
         ['aws', 'https://aws.amazon.com/'],
         ['prisma', 'https://www.prisma.io/'],
         ['graphql', 'https://graphql.org/'],
