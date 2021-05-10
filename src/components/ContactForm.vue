@@ -165,15 +165,13 @@ export default Vue.extend({
 })
 </script>
 
-<style scoped>
-.frosted {
-  background-color: rgba(0, 0, 0, 0.05);
-  backdrop-filter: blur(16px);
-}
+<style lang="sass" scoped>
+.frosted
+  background-color: rgba(0, 0, 0, 0.05) !important
+  backdrop-filter: blur(16px)
 
-@supports not (backdrop-filter: none) {
-  .frosted {
-    background-color: rgba(0, 0, 0, 0.15);
-  }
-}
+  @supports not (backdrop-filter: none)
+    background-color: rgba(0, 0, 0, 0.15) !important
 </style>
+
+<style scoped></style>
