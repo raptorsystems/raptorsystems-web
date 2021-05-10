@@ -20,9 +20,9 @@
       <nuxt />
     </v-main>
 
-    <v-footer id="footer" height="400" color="transparent">
+    <v-footer id="footer" height="440" color="transparent">
       <v-row
-        class="py-8 flex-column fill-height"
+        class="py-16 flex-column fill-height"
         align="center"
         justify="space-around"
       >
