@@ -1,9 +1,9 @@
 <template>
   <v-row class="py-4 my-0">
     <v-col cols="12" lg="8" class="pr-lg-6">
-      <p v-if="$vuetify.breakpoint.mdAndDown" class="text-h6">
+      <h3 v-if="$vuetify.breakpoint.mdAndDown" class="text-h6">
         <slot name="title">{{ title }}</slot>
-      </p>
+      </h3>
       <v-card max-width="800" class="mx-auto" rounded hover v-bind="linkProps">
         <slot name="img">
           <v-img
@@ -15,10 +15,10 @@
     </v-col>
     <v-col cols="12" lg="4">
       <slot>
-        <p v-if="$vuetify.breakpoint.lgAndUp" class="text-h6">
+        <h3 v-if="$vuetify.breakpoint.lgAndUp" class="text-h6">
           <slot name="title">{{ title }}</slot>
-        </p>
-        <p>
+        </h3>
+        <p class="text-body-2 font-weight-light">
           <slot name="description">{{ description }}</slot>
         </p>
         <slot name="action">
