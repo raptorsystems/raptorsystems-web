@@ -1,14 +1,14 @@
 <template>
   <ValidationObserver v-slot="{ failed, validate }">
-    <v-form
-      ref="form"
-      :name="formName"
-      method="post"
-      netlify="netlify"
-      netlify-honeypot="asunto"
-      @submit.prevent="submit(validate)"
-    >
-      <v-card class="pa-3 frosted" rounded="xl" elevation="6">
+    <v-card v-bind="$attrs" class="pa-3 mx-auto frosted">
+      <v-form
+        ref="form"
+        :name="formName"
+        method="post"
+        netlify="netlify"
+        netlify-honeypot="asunto"
+        @submit.prevent="submit(validate)"
+      >
         <v-card-text>
           <v-text-field v-show="false" label="asunto" name="asunto" />
           <ValidatedTextField
@@ -55,8 +55,8 @@
           </v-btn>
           <v-spacer />
         </v-card-actions>
-      </v-card>
-    </v-form>
+      </v-form>
+    </v-card>
     <v-snackbar bottom v-bind="snackbar">
       <template v-if="snackbar.success">
         Mensaje enviado 📨<br />pronto te contactaremos!
@@ -94,6 +94,7 @@ export default Vue.extend({
     ValidatedTextField,
     ValidationObserver,
   },
+  inheritAttrs: false,
   props: {
     email: { type: String, required: true },
   },
@@ -166,7 +167,13 @@ export default Vue.extend({
 
 <style scoped>
 .frosted {
-  background-color: rgba(255, 255, 255, 0.05) !important;
-  backdrop-filter: blur(32px);
+  background-color: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(16px);
+}
+
+@supports not (backdrop-filter: none) {
+  .frosted {
+    background-color: rgba(0, 0, 0, 0.15);
+  }
 }
 </style>

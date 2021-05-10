@@ -108,55 +108,64 @@
     </v-sheet>
 
     <!-- Contact -->
-    <v-sheet id="contact" tag="section" color="primary" dark tile>
+    <v-sheet id="contact" tag="section" dark tile>
+      <v-row class="fill-height" justify="center" no-gutters>
+        <!-- form -->
+        <v-col cols="12" lg="7" xl="8" order="2" order-lg="1">
       <v-img
         aspect-ratio="1.7778"
-        max-height="900"
+            max-height="600"
         sizes="(max-width: 1600px) 100vw, 1600px"
         v-bind="contact.image"
+            class="pa-md-16"
       >
-        <v-container
-          class="fill-height"
-          style="padding-top: 64px; padding-bottom: 64px"
-        >
-          <v-row>
-            <!-- form -->
-            <v-col cols="12" lg="6" class="px-4" order="2" order-lg="1">
-              <LazyContactForm :email="contact.email" />
+            <LazyContactForm
+              :email="contact.email"
+              rounded="xl"
+              outlined
+              :tile="$vuetify.breakpoint.smAndDown"
+              :max-width="$vuetify.breakpoint.mdAndUp ? 400 : undefined"
+            />
+          </v-img>
             </v-col>
             <!-- info -->
-            <v-col cols="12" lg="6" order="1" order-lg="2">
+        <v-col class="primary py-16 px-3 pa-md-16" order="1" order-lg="2">
               <!-- title -->
-              <h2 class="pb-4 text-h4 font-weight-thin">Contáctanos</h2>
-              <v-list class="transparent">
+          <h2 class="pb-2 text-h4 font-weight-light">Conversemos</h2>
+          <p class="font-weight-light">Cuéntanos de tu proyecto o negocio 😉</p>
+          <v-list
+            class="transparent pa-0 my-12 mx-auto ml-md-0"
+            max-width="352"
+            rounded
+          >
                 <!-- phones -->
                 <v-list-item
                   v-for="(phone, idx) in contact.phones"
                   :key="idx"
-                  class="px-2"
                   :href="`tel:${phone}`"
                 >
                   <v-list-item-action>
+                <v-icon>$mdiPhone</v-icon>
+              </v-list-item-action>
+              <v-list-item-title v-text="phone" />
+            </v-list-item>
+            <!-- WhatsApp -->
+            <v-list-item :href="contact.waLink">
+              <v-list-item-action>
                     <v-icon>$mdiWhatsapp</v-icon>
                   </v-list-item-action>
-                  <v-list-item-title class="text-left">
-                    {{ phone }}
-                  </v-list-item-title>
+              <v-list-item-title>WhatsApp</v-list-item-title>
                 </v-list-item>
                 <!-- email -->
-                <v-list-item class="px-2" :href="`mailto:${contact.email}`">
+            <v-list-item :href="`mailto:${contact.email}`">
                   <v-list-item-action>
                     <v-icon>$mdiEmail</v-icon>
                   </v-list-item-action>
-                  <v-list-item-title class="text-left">
-                    {{ contact.email }}
-                  </v-list-item-title>
+              <v-list-item-title class="text-body-2" v-text="contact.email" />
                 </v-list-item>
               </v-list>
             </v-col>
           </v-row>
-        </v-container>
-      </v-img>
     </v-sheet>
   </div>
 </template>
@@ -225,6 +234,7 @@ export default Vue.extend({
       contact: {
         email: `contacto@raptorsystems.cl`,
         phones: ['+56 9 88901709', '+56 9 84306761'],
+        waLink: `https://wa.link/cry2il`, // ? https://create.wa.link/
         image: {
           srcset: contactImage.srcSet,
           src: contactImage.src,
