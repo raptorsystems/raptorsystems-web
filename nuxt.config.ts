@@ -67,10 +67,6 @@ const config: NuxtConfig = {
     transpile: [
       'vee-validate/dist/rules', // https://logaretm.github.io/vee-validate/guide/rules.html#importing-rules-in-nuxt-js
     ],
-    babel: {
-      // TODO: workaround for https://github.com/nuxt/nuxt.js/issues/9224
-      plugins: [['@babel/plugin-proposal-private-methods', { loose: true }]],
-    },
   },
 
   axios: {
