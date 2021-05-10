@@ -1,12 +1,12 @@
 <template>
-  <a :href="link">
+  <NuxtLink nuxt to="/">
     <img
       :class="{ logo: true, shadow: dark }"
       :height="height"
       :src="logo"
       :alt="alt"
     />
-  </a>
+  </NuxtLink>
 </template>
 
 <script lang="ts">
@@ -19,7 +19,6 @@ export default Vue.extend({
   },
   data() {
     return {
-      link: '//www.raptorsystems.cl',
       alt: 'Raptor Systems',
     }
   },
