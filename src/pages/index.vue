@@ -13,17 +13,14 @@
         <v-container style="padding-top: 96px; padding-bottom: 128px">
           <v-row align-content="center" justify="end" class="text-md-right">
             <v-col cols="12" lg="6">
-              <h1 class="text-h4">
-                {{ hero.title }}
-              </h1>
+              <h1 class="text-h4 mb-6" v-text="hero.title" />
               <div
-                class="my-6"
+                class="mb-6"
                 :class="{
                   'primary--text text--lighten-5': $vuetify.breakpoint.lgAndUp,
                 }"
-              >
-                {{ hero.tagline }}
-              </div>
+                v-text="hero.tagline"
+              />
               <ContactBtn
                 x-large
                 rounded
@@ -46,14 +43,14 @@
       <v-container style="padding-top: 92px; padding-bottom: 128px">
         <v-row>
           <v-col cols="12">
-            <h2 class="text-h4 font-weight-thin">Servicios</h2>
+            <h2 class="text-h4 font-weight-light mb-6">Servicios</h2>
           </v-col>
         </v-row>
         <v-row justify="space-between">
           <v-col v-for="(item, idx) in services" :key="idx" cols="12" sm="4">
             <v-card class="py-8 text-center fill-height" rounded="lg" hover>
               <v-img :src="item.icon" height="92" contain />
-              <div class="pt-6 text-h6">{{ item.title }}</div>
+              <div class="pt-6 text-h6" v-text="item.title" />
             </v-card>
           </v-col>
         </v-row>
@@ -68,7 +65,7 @@
       <v-container style="padding-top: 128px; padding-bottom: 192px">
         <v-row>
           <v-col cols="12">
-            <h2 class="text-h4 font-weight-thin">Nuestros proyectos</h2>
+            <h2 class="text-h4 font-weight-light mb-6">Nuestros proyectos</h2>
           </v-col>
         </v-row>
         <ProjectRowCarreraAps />
@@ -83,7 +80,9 @@
       <v-container style="padding-top: 128px; padding-bottom: 160px">
         <v-row class="mb-6">
           <v-col cols="12">
-            <h2 class="text-h4 font-weight-thin">Tecnologías que utilizamos</h2>
+            <h2 class="text-h4 font-weight-light mb-6">
+              Tecnologías que utilizamos
+            </h2>
           </v-col>
         </v-row>
         <v-row justify="center">
@@ -112,13 +111,13 @@
       <v-row class="fill-height" justify="center" no-gutters>
         <!-- form -->
         <v-col cols="12" lg="7" xl="8" order="2" order-lg="1">
-      <v-img
-        aspect-ratio="1.7778"
+          <v-img
+            aspect-ratio="1.7778"
             max-height="600"
-        sizes="(max-width: 1600px) 100vw, 1600px"
-        v-bind="contact.image"
+            sizes="(max-width: 1600px) 100vw, 1600px"
+            v-bind="contact.image"
             class="pa-md-16"
-      >
+          >
             <LazyContactForm
               :email="contact.email"
               rounded="xl"
@@ -127,10 +126,10 @@
               :max-width="$vuetify.breakpoint.mdAndUp ? 400 : undefined"
             />
           </v-img>
-            </v-col>
-            <!-- info -->
+        </v-col>
+        <!-- info -->
         <v-col class="primary py-16 px-3 pa-md-16" order="1" order-lg="2">
-              <!-- title -->
+          <!-- title -->
           <h2 class="pb-2 text-h4 font-weight-light">Conversemos</h2>
           <p class="font-weight-light">Cuéntanos de tu proyecto o negocio 😉</p>
           <v-list
@@ -138,13 +137,13 @@
             max-width="352"
             rounded
           >
-                <!-- phones -->
-                <v-list-item
-                  v-for="(phone, idx) in contact.phones"
-                  :key="idx"
-                  :href="`tel:${phone}`"
-                >
-                  <v-list-item-action>
+            <!-- phones -->
+            <v-list-item
+              v-for="(phone, idx) in contact.phones"
+              :key="idx"
+              :href="`tel:${phone}`"
+            >
+              <v-list-item-action>
                 <v-icon>$mdiPhone</v-icon>
               </v-list-item-action>
               <v-list-item-title v-text="phone" />
@@ -152,20 +151,20 @@
             <!-- WhatsApp -->
             <v-list-item :href="contact.waLink">
               <v-list-item-action>
-                    <v-icon>$mdiWhatsapp</v-icon>
-                  </v-list-item-action>
+                <v-icon>$mdiWhatsapp</v-icon>
+              </v-list-item-action>
               <v-list-item-title>WhatsApp</v-list-item-title>
-                </v-list-item>
-                <!-- email -->
+            </v-list-item>
+            <!-- email -->
             <v-list-item :href="`mailto:${contact.email}`">
-                  <v-list-item-action>
-                    <v-icon>$mdiEmail</v-icon>
-                  </v-list-item-action>
+              <v-list-item-action>
+                <v-icon>$mdiEmail</v-icon>
+              </v-list-item-action>
               <v-list-item-title class="text-body-2" v-text="contact.email" />
-                </v-list-item>
-              </v-list>
-            </v-col>
-          </v-row>
+            </v-list-item>
+          </v-list>
+        </v-col>
+      </v-row>
     </v-sheet>
   </div>
 </template>

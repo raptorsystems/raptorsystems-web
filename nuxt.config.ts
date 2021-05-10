@@ -100,9 +100,9 @@ const config: NuxtConfig = {
     // Workaround for adding font-display option
     // https://github.com/Developmint/nuxt-webfontloader#adding-google-fonts-with-font-display-option
     custom: {
-      families: ['Raleway:n1,n4,n5', 'Lato:n3,n4,n5'], // uses FVD notation https://github.com/typekit/fvd
+      families: ['Raleway:n3,n4,n5', 'Lato:n3,n4,n5'], // uses FVD notation https://github.com/typekit/fvd
       urls: [
-        'https://fonts.googleapis.com/css?family=Raleway:100,400,500&display=swap',
+        'https://fonts.googleapis.com/css?family=Raleway:300,400,500&display=swap',
         'https://fonts.googleapis.com/css?family=Lato:300,400,500&display=swap',
       ],
     },
