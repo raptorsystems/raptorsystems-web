@@ -2,7 +2,6 @@
   <ProjectRow
     title="Krypto Ledgers"
     link="https://kryptoledgers.com"
-    action-text="prueba la beta"
     :img-props="img"
   >
     <template #description>
