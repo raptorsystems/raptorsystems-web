@@ -173,5 +173,3 @@ export default Vue.extend({
   @supports not (backdrop-filter: none)
     background-color: rgba(0, 0, 0, 0.15) !important
 </style>
-
-<style scoped></style>
