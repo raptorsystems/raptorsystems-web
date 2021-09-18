@@ -10,10 +10,22 @@
     >
       <RaptorLogo :dark="!isScrolled" :height="42" />
       <v-spacer />
-      <ContactBtn depressed rounded color="primary">
-        <span v-if="$vuetify.breakpoint.lgAndUp">contáctanos</span>
-        <v-icon :right="$vuetify.breakpoint.lgAndUp">$mdiPhone</v-icon>
-      </ContactBtn>
+      <AppBarBtn
+        v-if="$route.name === 'index'"
+        text="contáctanos"
+        icon="$mdiPhone"
+        color="primary"
+        @click="$vuetify.goTo('#contact')"
+      />
+      <AppBarBtn
+        v-else
+        text="home"
+        icon="$mdiHome"
+        color="transparent"
+        :dark="!isScrolled"
+        nuxt
+        to="/"
+      />
     </v-app-bar>
 
     <v-main>
@@ -42,12 +54,12 @@
 import Vue from 'vue'
 
 // components
-import ContactBtn from '~/components/ContactBtn.vue'
+import AppBarBtn from '~/components/AppBarBtn.vue'
 import RaptorLogo from '~/components/RaptorLogo.vue'
 
 export default Vue.extend({
   components: {
-    ContactBtn,
+    AppBarBtn,
     RaptorLogo,
   },
   data() {
