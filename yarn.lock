@@ -2027,6 +2027,7 @@ __metadata:
     responsive-loader: ^2.3.0
     sharp: ^0.28.1
     vee-validate: ^3.4.5
+    vue-plausible: ^1.2.1
     vuetify: ^2.4.11
   languageName: unknown
   linkType: soft
@@ -10677,6 +10678,13 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"plausible-tracker@npm:^0.3.1":
+  version: 0.3.1
+  resolution: "plausible-tracker@npm:0.3.1"
+  checksum: 51fe2a2b5b2034f8f8c5989bf85e35e69a4a341c360995cfb1c7d60ef1b20089b7915a3539ae0903572dda86a6ac6d2d4b8fa4aa903228f2714bef201b5eb92c
+  languageName: node
+  linkType: hard
+
 "pluralize@npm:^8.0.0":
   version: 8.0.0
   resolution: "pluralize@npm:8.0.0"
@@ -14443,6 +14451,15 @@ typescript@~4.2:
   version: 1.1.1
   resolution: "vue-no-ssr@npm:1.1.1"
   checksum: 70b5009985a303c5063020bda4daeecbe267ba1d733e3c2aebbdc73f0e44109092b8fa5e6afa1d97602cf1b625dc2edca603329aea0893599fe4e3804e2c60b1
+  languageName: node
+  linkType: hard
+
+"vue-plausible@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "vue-plausible@npm:1.2.1"
+  dependencies:
+    plausible-tracker: ^0.3.1
+  checksum: 01c62c8ed3233c58c0c23ca5bdfa662df86a68aee866598e002802fc5affbea3161a01db045c39dc01976cb8799c405e04ca6a140295894bc603f01c325604ac
   languageName: node
   linkType: hard
 

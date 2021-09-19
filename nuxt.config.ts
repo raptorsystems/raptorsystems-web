@@ -60,7 +60,7 @@ const config: NuxtConfig = {
     '@nuxtjs/google-analytics',
     '@nuxtjs/vuetify',
     '@aceforth/nuxt-optimized-images',
-    '~/modules/plausible',
+    'vue-plausible',
   ],
 
   build: {
