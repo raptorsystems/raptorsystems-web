@@ -17,8 +17,9 @@
 </template>
 
 <script lang="ts">
-import Vue, { PropOptions } from 'vue'
 import { ValidationProvider } from 'vee-validate'
+import type { PropOptions } from 'vue'
+import Vue from 'vue'
 
 export default Vue.extend({
   name: 'ValidatedTextField',
