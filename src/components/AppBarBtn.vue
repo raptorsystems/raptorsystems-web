@@ -1,5 +1,5 @@
 <template>
-  <v-btn v-bind="attrs$" class="text-caption">
+  <v-btn v-bind="attrs$" class="text-caption" v-on="$listeners">
     <span v-if="!isMobile" v-text="text" />
     <v-icon v-if="icon" :right="!isMobile" v-text="icon" />
   </v-btn>
