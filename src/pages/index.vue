@@ -17,7 +17,7 @@
               <div
                 class="mb-6"
                 :class="{
-                  'primary--text text--lighten-5': $vuetify.breakpoint.lgAndUp,
+                  'primary--text text--lighten-5': $vuetify.display.lgAndUp,
                 }"
                 v-text="hero.tagline"
               />
@@ -116,7 +116,7 @@
             aspect-ratio="1.7778"
             max-height="600"
             sizes="(max-width: 1600px) 100vw, 1600px"
-            v-bind="contact.image"
+            :src="contact.image"
             class="pa-md-16"
           />
         </v-col>
@@ -164,89 +164,64 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script setup lang="ts">
+import { useDisplay } from 'vuetify'
+import contactImageSrc from '~/assets/images/contact.jpg'
+import heroImageSrc from '~/assets/images/hero.jpg'
 
-// images
-import contactImage from '~/assets/images/contact.jpg?resize&sizes[]=300&sizes[]=400&sizes[]=500&sizes[]=600&sizes[]=800&sizes[]=1000&sizes[]=1200&sizes[]=1400&sizes[]=1600'
-import heroImage from '~/assets/images/hero.jpg?resize&sizes[]=960&sizes[]=1280&sizes[]=1600&sizes[]=1920'
+const { mdAndUp } = useDisplay()
 
-//  components
-import ProjectRowCarreraAps from '~/components/project/RowCarreraAps.vue'
-import ProjectRowKryptoLedgers from '~/components/project/RowKryptoLedgers.vue'
-import SectionDivider from '~/components/SectionDivider.vue'
+const hero = {
+  title: `Desarrollemos juntos tus proyectos`,
+  tagline: `Cuenta con nosotros como partner tecnológico, creamos experiencias digitales enfocadas en solucionar los problemas de tus clientes.`,
+}
 
-export default defineComponent({
-  components: {
-    SectionDivider,
-    ProjectRowCarreraAps,
-    ProjectRowKryptoLedgers,
+const heroImage = computed(() =>
+  mdAndUp
+    ? { src: heroImageSrc }
+    : { gradient: '180deg, #235de5 15%, #05d5ff 70%, #a6ffcb 94%' },
+)
+
+const services = [
+  {
+    title: 'Desarrollo a medida',
+    icon: '/icons/icons8-code-file.svg',
   },
-  data() {
-    return {
-      hero: {
-        title: `Desarrollemos juntos tus proyectos`,
-        tagline: `Cuenta con nosotros como partner tecnológico, creamos experiencias digitales enfocadas en solucionar los problemas de tus clientes.`,
-      },
-      services: [
-        {
-          title: 'Desarrollo a medida',
-          icon: '/icons/icons8-code-file.svg',
-        },
-        {
-          title: 'Aplicaciones móviles',
-          icon: '/icons/icons8-cell-phone.svg',
-        },
-        {
-          title: 'Páginas web',
-          icon: '/icons/icons8-application-window.svg',
-        },
-      ],
-      techs: [
-        ['python', 'https://www.python.org/'],
-        ['django', 'https://www.djangoproject.com/'],
-        ['typescript-icon', 'https://www.typescriptlang.org/'],
-        ['nodejs-icon', 'https://nodejs.org/'],
-        [
-          'html-5',
-          'https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5',
-        ],
-        ['css-3', 'https://developer.mozilla.org/en-US/docs/Web/CSS'],
-        ['vue', 'https://vuejs.org/'],
-        ['vuetifyjs', 'https://vuetifyjs.com/'],
-        ['nuxt', 'https://nuxtjs.org/'],
-        ['tailwindcss-icon', 'https://tailwindcss.com/'],
-        ['aws', 'https://aws.amazon.com/'],
-        ['prisma', 'https://www.prisma.io/'],
-        ['graphql', 'https://graphql.org/'],
-        ['postgresql', 'https://www.postgresql.org/'],
-        ['redis', 'https://redis.io/'],
-        ['git-icon', 'https://git-scm.com/'],
-      ],
-      contact: {
-        email: `contacto@raptorsystems.cl`,
-        phones: ['+56 9 88901709', '+56 9 84306761'],
-        waLink: `https://wa.link/cry2il`, // ? https://create.wa.link/
-        image: {
-          srcset: contactImage.srcSet,
-          src: contactImage.src,
-        },
-      },
-    }
+  {
+    title: 'Aplicaciones móviles',
+    icon: '/icons/icons8-cell-phone.svg',
   },
-  computed: {
-    heroImage() {
-      return this.$vuetify.breakpoint.mdAndUp
-        ? {
-            srcset: heroImage.srcSet,
-            src: heroImage.src,
-          }
-        : {
-            gradient: '180deg, #235de5 15%, #05d5ff 70%, #a6ffcb 94%',
-          }
-    },
+  {
+    title: 'Páginas web',
+    icon: '/icons/icons8-application-window.svg',
   },
-})
+]
+
+const techs = [
+  ['python', 'https://www.python.org/'],
+  ['django', 'https://www.djangoproject.com/'],
+  ['typescript-icon', 'https://www.typescriptlang.org/'],
+  ['nodejs-icon', 'https://nodejs.org/'],
+  ['html-5', 'https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5'],
+  ['css-3', 'https://developer.mozilla.org/en-US/docs/Web/CSS'],
+  ['vue', 'https://vuejs.org/'],
+  ['vuetifyjs', 'https://vuetifyjs.com/'],
+  ['nuxt', 'https://nuxtjs.org/'],
+  ['tailwindcss-icon', 'https://tailwindcss.com/'],
+  ['aws', 'https://aws.amazon.com/'],
+  ['prisma', 'https://www.prisma.io/'],
+  ['graphql', 'https://graphql.org/'],
+  ['postgresql', 'https://www.postgresql.org/'],
+  ['redis', 'https://redis.io/'],
+  ['git-icon', 'https://git-scm.com/'],
+]
+
+const contact = {
+  email: `contacto@raptorsystems.cl`,
+  phones: ['+56 9 88901709', '+56 9 84306761'],
+  waLink: `https://wa.link/cry2il`, // ? https://create.wa.link/
+  image: contactImageSrc,
+}
 </script>
 
 <style>

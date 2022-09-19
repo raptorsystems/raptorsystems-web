@@ -6,6 +6,7 @@
       elevate-on-scroll
       height="64"
       :scroll-threshold="scrollThreshold"
+      :elevation="appBarElevation"
       :color="appBarColor"
     >
       <RaptorLogo :dark="!isScrolled" :height="42" />
@@ -29,7 +30,7 @@
     </v-app-bar>
 
     <v-main>
-      <nuxt />
+      <slot />
     </v-main>
 
     <v-footer id="footer" height="440" color="transparent">
@@ -52,45 +53,22 @@
   </v-app>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script setup lang="ts">
+const currentScroll = ref(0)
 
-// components
-import AppBarBtn from '~/components/AppBarBtn.vue'
-import RaptorLogo from '~/components/RaptorLogo.vue'
+const scrollThreshold = 20
 
-export default defineComponent({
-  components: {
-    AppBarBtn,
-    RaptorLogo,
-  },
-  data() {
-    return {
-      currentScroll: 0,
-      scrollThreshold: 20,
-      raptorLogo: '/images/raptorsystems_light.svg',
-      links: {
-        raptor: '//raptorsystems.cl',
-      },
-    }
-  },
-  computed: {
-    currentYear(): number {
-      return new Date().getFullYear()
-    },
-    isScrolled(): boolean {
-      return this.currentScroll > this.scrollThreshold
-    },
-    appBarColor(): string {
-      return this.isScrolled ? 'white' : 'primary'
-    },
-  },
-  methods: {
-    onScroll(): void {
-      this.currentScroll = window.pageYOffset
-    },
-  },
-})
+const currentYear = computed(() => new Date().getFullYear())
+
+const isScrolled = computed(() => currentScroll.value > scrollThreshold)
+
+const appBarColor = computed(() => (isScrolled.value ? 'white' : 'primary'))
+
+const appBarElevation = computed(() => (isScrolled.value ? undefined : 0))
+
+const onScroll = () => {
+  currentScroll.value = window.pageYOffset
+}
 </script>
 
 <style>

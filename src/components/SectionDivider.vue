@@ -10,30 +10,30 @@
   </svg>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script setup lang="ts">
+import { useTheme } from 'vuetify'
 
-export default defineComponent({
-  props: {
-    height: { type: [String, Number], default: 64 },
-    color: { type: String, default: 'white' },
-    bottom: { type: Boolean, default: true },
-    top: { type: Boolean, default: false },
-  },
-  computed: {
-    fill(): string {
-      const themeColor = this.$vuetify.theme.themes.light[this.color] as string
-      if (!themeColor) return this.color
-      return themeColor
-    },
-    points(): string {
-      if (this.top) return '0,0 100,0 100,100'
-      return '0,100 100,0 100,100'
-    },
-    direction(): 'top' | 'bottom' | undefined {
-      return this.top ? 'top' : this.bottom ? 'bottom' : undefined
-    },
-  },
+const props = defineProps({
+  height: { type: [String, Number], default: 64 },
+  color: { type: String, default: 'white' },
+  bottom: { type: Boolean, default: true },
+  top: { type: Boolean, default: false },
+})
+
+const fill = computed(() => {
+  const { current } = useTheme()
+  const themeColor = current.value.colors[props.color]
+  if (!themeColor) return props.color
+  return themeColor
+})
+
+const points = computed(() => {
+  if (props.top) return '0,0 100,0 100,100'
+  return '0,100 100,0 100,100'
+})
+
+const direction = computed(() => {
+  return props.top ? 'top' : props.bottom ? 'bottom' : undefined
 })
 </script>
 

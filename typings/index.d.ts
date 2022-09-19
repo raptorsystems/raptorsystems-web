@@ -1,6 +1,0 @@
-import '@nuxt/types'
-import '@nuxtjs/google-analytics'
-import '@nuxtjs/pwa'
-import '@nuxtjs/vuetify'
-import 'vue-plausible'
-import 'vuetify'

@@ -1,15 +1,13 @@
-$body-font-family: 'Lato', sans-serif !default;
-$heading-font-family: 'Raleway', sans-serif;
+@use 'vuetify' with (
+  $color-pack: false,
+  $body-font-family: 'Lato',
+  $heading-font-family: 'Raleway',
+  $font-size-root: 20px,
 
-@import '~vuetify/src/styles/styles.sass';
+  // $container-max-widths: (
+  //   'md': map-get($grid-breakpoints, 'sm') * 0.9375,
+  //   'lg': map-get($grid-breakpoints, 'md') * 0.9375,
+  //   'xl': map-get($grid-breakpoints, 'lg') * 0.9375,
+  // ),
 
-$font-size-root: 20px;
-
-$container-max-widths: (
-  'md': map-get($grid-breakpoints, 'sm') * 0.9375,
-  'lg': map-get($grid-breakpoints, 'md') * 0.9375,
-  'xl': map-get($grid-breakpoints, 'lg') * 0.9375,
 );
-
-$card-elevation: 0;
-$card-hover-elevation: 12;

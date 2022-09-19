@@ -1,31 +1,3 @@
 {
-  "compilerOptions": {
-    /* Basic Options */
-    "target": "ES2020",
-    "module": "ESNext",
-    "lib": ["ESNext", "ESNext.AsyncIterable", "DOM"],
-    "allowJs": true,
-    "sourceMap": true,
-    "outDir": "dist",
-    "noEmit": true,
-
-    /* Strict Type-Checking Options */
-    "strict": true,
-
-    /* Module Resolution Options */
-    "moduleResolution": "Node",
-    "baseUrl": ".",
-    "paths": {
-      "~/*": ["src/*"],
-      "@/*": ["src/*"]
-    },
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-
-    /* Experimental Options */
-    "experimentalDecorators": true
-  },
-  "vueCompilerOptions": {
-    "target": 2.7
-  }
+  "extends": "./.nuxt/tsconfig.json"
 }

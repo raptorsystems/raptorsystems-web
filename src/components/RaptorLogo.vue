@@ -9,25 +9,16 @@
   </NuxtLink>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  props: {
-    dark: { type: Boolean, default: false },
-    height: { type: Number, default: 64 },
-  },
-  data() {
-    return {
-      alt: 'Raptor Systems',
-    }
-  },
-  computed: {
-    logo(): string {
-      return this.dark ? '/raptorsystems_dark.svg' : '/raptorsystems_light.svg'
-    },
-  },
+<script setup lang="ts">
+const props = defineProps({
+  dark: { type: Boolean, default: false },
+  height: { type: Number, default: 64 },
 })
+const alt = 'Raptor Systems'
+
+const logo = computed(() =>
+  props.dark ? '/raptorsystems_dark.svg' : '/raptorsystems_light.svg',
+)
 </script>
 
 <style scoped>

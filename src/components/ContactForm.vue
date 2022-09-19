@@ -35,8 +35,6 @@ export default defineComponent({
 
       const { createPopup } = await import('@typeform/embed')
 
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-expect-error
       await import('@typeform/embed/build/css/popup.css')
 
       this.popup = createPopup('kNPl8W6o', {

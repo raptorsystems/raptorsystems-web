@@ -11,25 +11,10 @@
   </ProjectRow>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script setup lang="ts">
+import imgSrc from '~/assets/images/projects/krypto-ledgers-light.jpeg'
 
-import img from '~/assets/images/projects/krypto-ledgers-light.jpeg?resize&sizes[]=300&sizes[]=400&sizes[]=500&sizes[]=600&sizes[]=800&sizes[]=1000&sizes[]=1200&sizes[]=1600'
-
-// components
-import ProjectRow from '~/components/project/Row.vue'
-
-export default defineComponent({
-  components: {
-    ProjectRow,
-  },
-  data() {
-    return {
-      img: {
-        srcset: img.srcSet,
-        src: img.src,
-      },
-    }
-  },
-})
+const img = {
+  src: imgSrc,
+}
 </script>
