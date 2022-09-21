@@ -44,7 +44,7 @@
     "responsive-loader": "^2.3.0",
     "sharp": "^0.29.1",
     "vue-plausible": "^1.2.1",
-    "vuetify": "^2.5.8"
+    "vuetify": "^2.6.10"
   },
   "resolutions": {
     "eslint-plugin-vuetify/eslint-plugin-vue": "^7.1.0"
