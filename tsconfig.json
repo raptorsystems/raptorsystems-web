@@ -24,5 +24,8 @@
 
     /* Experimental Options */
     "experimentalDecorators": true
+  },
+  "vueCompilerOptions": {
+    "target": 2.7
   }
 }
