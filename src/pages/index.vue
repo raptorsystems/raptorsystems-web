@@ -171,18 +171,18 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { defineComponent } from 'vue'
 
 // images
 import contactImage from '~/assets/images/contact.jpg?resize&sizes[]=300&sizes[]=400&sizes[]=500&sizes[]=600&sizes[]=800&sizes[]=1000&sizes[]=1200&sizes[]=1400&sizes[]=1600'
 import heroImage from '~/assets/images/hero.jpg?resize&sizes[]=960&sizes[]=1280&sizes[]=1600&sizes[]=1920'
 
 //  components
-import SectionDivider from '~/components/SectionDivider.vue'
 import ProjectRowCarreraAps from '~/components/project/RowCarreraAps.vue'
 import ProjectRowKryptoLedgers from '~/components/project/RowKryptoLedgers.vue'
+import SectionDivider from '~/components/SectionDivider.vue'
 
-export default Vue.extend({
+export default defineComponent({
   components: {
     SectionDivider,
     ProjectRowCarreraAps,

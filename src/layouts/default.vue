@@ -51,13 +51,13 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { defineComponent } from 'vue'
 
 // components
 import AppBarBtn from '~/components/AppBarBtn.vue'
 import RaptorLogo from '~/components/RaptorLogo.vue'
 
-export default Vue.extend({
+export default defineComponent({
   components: {
     AppBarBtn,
     RaptorLogo,
