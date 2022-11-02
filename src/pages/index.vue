@@ -147,7 +147,7 @@
               <v-list-item-action>
                 <v-icon>$mdiPhone</v-icon>
               </v-list-item-action>
-              <v-list-item-title v-text="phone" />
+              <v-list-item-title>{{ phone }}</v-list-item-title>
             </v-list-item>
             <!-- WhatsApp -->
             <v-list-item :href="contact.waLink">
@@ -161,7 +161,9 @@
               <v-list-item-action>
                 <v-icon>$mdiEmail</v-icon>
               </v-list-item-action>
-              <v-list-item-title class="text-body-2" v-text="contact.email" />
+              <v-list-item-title class="text-body-2">
+                {{ contact.email }}
+              </v-list-item-title>
             </v-list-item>
           </v-list>
         </v-col>
