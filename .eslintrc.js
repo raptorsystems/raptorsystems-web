@@ -32,6 +32,7 @@ module.exports = {
     '@typescript-eslint/camelcase': 'off',
     // vue
     'vue/html-self-closing': ['error', { html: { void: 'always' } }],
+    'vue/multi-word-component-names': 'off',
     // vuetify
     'vuetify/no-deprecated-classes': 'error',
     'vuetify/grid-unknown-attributes': 'error',
