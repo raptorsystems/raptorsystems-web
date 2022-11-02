@@ -118,15 +118,7 @@
             sizes="(max-width: 1600px) 100vw, 1600px"
             v-bind="contact.image"
             class="pa-md-16"
-          >
-            <LazyContactForm
-              :email="contact.email"
-              rounded="xl"
-              outlined
-              :tile="$vuetify.breakpoint.smAndDown"
-              :max-width="$vuetify.breakpoint.mdAndUp ? 400 : undefined"
-            />
-          </v-img>
+          />
         </v-col>
         <!-- info -->
         <v-col class="primary py-16 px-3 pa-md-16" order="1" order-lg="2">

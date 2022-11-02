@@ -51,9 +51,7 @@ const config: NuxtConfig = {
 
   generate: { fallback: true },
 
-  plugins: ['~/plugins/vee-validate'],
-
-  modules: ['@nuxtjs/axios', '@nuxtjs/pwa', 'nuxt-webfontloader'],
+  modules: ['@nuxtjs/pwa', 'nuxt-webfontloader'],
 
   buildModules: [
     '@nuxt/typescript-build',
@@ -62,16 +60,6 @@ const config: NuxtConfig = {
     '@aceforth/nuxt-optimized-images',
     'vue-plausible',
   ],
-
-  build: {
-    transpile: [
-      'vee-validate/dist/rules', // https://logaretm.github.io/vee-validate/guide/rules.html#importing-rules-in-nuxt-js
-    ],
-  },
-
-  axios: {
-    baseURL: '/',
-  },
 
   googleAnalytics: {
     id: process.env.GOOGLE_ID as string,

@@ -47,6 +47,8 @@
         </div>
       </v-row>
     </v-footer>
+
+    <ContactForm :show="isScrolled" />
   </v-app>
 </template>
 

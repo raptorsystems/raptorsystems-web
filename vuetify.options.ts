@@ -1,12 +1,5 @@
 // ? this file cant import any ts code, as is imported on a .js file on @nuxtjs/vuetify module
-import {
-  mdiAccount,
-  mdiEmail,
-  mdiHome,
-  mdiPhone,
-  mdiSend,
-  mdiWhatsapp,
-} from '@mdi/js'
+import { mdiEmail, mdiHome, mdiMessage, mdiPhone, mdiWhatsapp } from '@mdi/js'
 import { es } from 'vuetify/lib/locale'
 import { UserVuetifyPreset } from 'vuetify/types'
 
@@ -17,11 +10,10 @@ export const theme = {
 }
 
 const icons = {
-  mdiAccount,
   mdiEmail,
   mdiHome,
+  mdiMessage,
   mdiPhone,
-  mdiSend,
   mdiWhatsapp,
 }
 
