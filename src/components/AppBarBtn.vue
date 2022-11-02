@@ -1,5 +1,10 @@
 <template>
-  <v-btn v-bind="$attrs" class="text-caption" depressed rounded>
+  <v-btn
+    v-bind="$attrs"
+    class="text-caption text-uppercase"
+    variant="flat"
+    rounded
+  >
     <span v-if="!$vuetify.display.mdAndDown" v-text="text" />
     <v-icon v-if="icon" :right="!$vuetify.display.mdAndDown">{{ icon }}</v-icon>
   </v-btn>

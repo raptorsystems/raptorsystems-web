@@ -108,7 +108,7 @@
     </v-sheet>
 
     <!-- Contact -->
-    <v-sheet id="contact" tag="section" dark tile>
+    <v-sheet id="contact" tag="section" tile>
       <v-row class="fill-height" justify="center" no-gutters>
         <!-- form -->
         <v-col cols="12" lg="7" xl="8" order="2" order-lg="1">
@@ -116,12 +116,12 @@
             aspect-ratio="1.7778"
             max-height="600"
             sizes="(max-width: 1600px) 100vw, 1600px"
-            :src="contact.image"
+            :src="$img(contact.image, { format: 'webp', quality: 70 })"
             class="pa-md-16"
           />
         </v-col>
         <!-- info -->
-        <v-col class="primary py-16 px-3 pa-md-16" order="1" order-lg="2">
+        <v-col class="bg-primary py-16 px-3 pa-md-16" order="1" order-lg="2">
           <!-- title -->
           <h2 class="pb-2 text-h4 font-weight-light">Conversemos</h2>
           <p class="font-weight-light">Cuéntanos de tu proyecto o negocio 😉</p>
@@ -166,10 +166,9 @@
 
 <script setup lang="ts">
 import { useDisplay } from 'vuetify'
-import contactImageSrc from '~/assets/images/contact.jpg'
-import heroImageSrc from '~/assets/images/hero.jpg'
 
 const { mdAndUp } = useDisplay()
+const $img = useImage()
 
 const hero = {
   title: `Desarrollemos juntos tus proyectos`,
@@ -178,7 +177,7 @@ const hero = {
 
 const heroImage = computed(() =>
   mdAndUp
-    ? { src: heroImageSrc }
+    ? { src: $img('hero.jpg', { format: 'webp', quality: 70 }) }
     : { gradient: '180deg, #235de5 15%, #05d5ff 70%, #a6ffcb 94%' },
 )
 
@@ -220,7 +219,7 @@ const contact = {
   email: `contacto@raptorsystems.cl`,
   phones: ['+56 9 88901709', '+56 9 84306761'],
   waLink: `https://wa.link/cry2il`, // ? https://create.wa.link/
-  image: contactImageSrc,
+  image: 'contact.jpg',
 }
 </script>
 

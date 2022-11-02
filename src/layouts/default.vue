@@ -33,7 +33,7 @@
       <slot />
     </v-main>
 
-    <v-footer id="footer" height="440" color="transparent">
+    <v-footer id="footer" style="height: 440px" color="transparent">
       <v-row
         class="py-16 flex-column fill-height"
         align="center"

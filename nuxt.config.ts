@@ -102,6 +102,10 @@ export default defineNuxtConfig({
     },
   },
 
+  image: {
+    dir: 'assets/images',
+  },
+
   // googleAnalytics: {
   //   id: process.env.GOOGLE_ID,
   // },
@@ -112,13 +116,6 @@ export default defineNuxtConfig({
 
   // plausible: {
   //   domain: process.env.DOMAIN ?? 'raptorsystems.cl',
-  // },
-
-  // vuetify: {
-  //   treeShake: true,
-  //   defaultAssets: false,
-  //   customVariables: ['~/assets/variables.scss'],
-  //   optionsPath: '../vuetify.options.ts', // relative to srcDir
   // },
 
   // webfontloader: {

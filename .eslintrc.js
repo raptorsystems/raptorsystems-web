@@ -10,7 +10,7 @@ module.exports = {
     sourceType: 'module',
     // tsconfigRootDir: __dirname,
     // project: ['./tsconfig.json', './tsconfig.eslint.json'],
-    // extraFileExtensions: ['.vue'],
+    extraFileExtensions: ['.vue'],
   },
 
   extends: [

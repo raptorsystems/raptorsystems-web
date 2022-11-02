@@ -6,10 +6,7 @@
       </h3>
       <v-card max-width="800" class="mx-auto" rounded hover v-bind="linkProps">
         <slot name="img">
-          <v-img
-            sizes="(max-width: 824px) calc(100vw - 24px), (max-width: 944px) 800px, (max-width: 1904px) 754px, 564px"
-            v-bind="imgProps"
-          />
+          <v-img :src="$img(imgSrc, { format: 'webp', quality: 70 })" />
         </slot>
       </v-card>
     </v-col>
@@ -43,7 +40,7 @@ const props = defineProps({
   description: { type: String, default: null },
   link: { type: String, default: null },
   actionText: { type: String, default: 'ver más' },
-  imgProps: { type: Object, default: () => ({}) },
+  imgSrc: { type: String, required: true },
 })
 
 const linkProps = computed(() =>
