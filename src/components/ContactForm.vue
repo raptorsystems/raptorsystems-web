@@ -2,16 +2,15 @@
   <v-fab-transition>
     <v-btn
       v-if="show"
-      fab
-      large
-      bottom
-      right
+      icon
+      size="large"
+      location="bottom right"
       fixed
       color="primary"
-      class="ma-6"
+      class="ma-6 rounded-circle"
       @click="onClick"
     >
-      <v-icon size="28">$mdiMessage</v-icon>
+      <v-icon size="28" icon="$mdiMessage"></v-icon>
     </v-btn>
   </v-fab-transition>
 </template>

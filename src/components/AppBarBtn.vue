@@ -6,7 +6,7 @@
     rounded
   >
     <span v-if="!$vuetify.display.mdAndDown" v-text="text" />
-    <v-icon v-if="icon" :right="!$vuetify.display.mdAndDown">{{ icon }}</v-icon>
+    <v-icon v-if="icon" :end="!$vuetify.display.mdAndDown">{{ icon }}</v-icon>
   </v-btn>
 </template>
 

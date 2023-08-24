@@ -2,10 +2,7 @@
   <v-app>
     <v-app-bar
       v-scroll="onScroll"
-      app
-      elevate-on-scroll
       height="64"
-      :scroll-threshold="scrollThreshold"
       :elevation="appBarElevation"
       :color="appBarColor"
     >
@@ -16,7 +13,7 @@
         text="contáctanos"
         icon="$mdiPhone"
         color="primary"
-        @click="$vuetify.goTo('#contact')"
+        href="#contact"
       />
       <AppBarBtn
         v-else

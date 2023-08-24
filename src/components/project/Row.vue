@@ -6,7 +6,7 @@
       </h3>
       <v-card max-width="800" class="mx-auto" rounded hover v-bind="linkProps">
         <slot name="img">
-          <v-img :src="$img(imgSrc, { format: 'webp', quality: 70 })" />
+          <v-img :src="img(imgSrc, { format: 'webp', quality: 70 })" />
         </slot>
       </v-card>
     </v-col>
@@ -21,9 +21,9 @@
         <slot name="action">
           <v-btn
             rounded
-            dark
+            theme="dark"
             color="white"
-            class="primary--text"
+            class="text-primary"
             v-bind="linkProps"
           >
             {{ actionText }}
@@ -42,6 +42,8 @@ const props = defineProps({
   actionText: { type: String, default: 'ver más' },
   imgSrc: { type: String, required: true },
 })
+
+const img = useImage()
 
 const linkProps = computed(() =>
   props.link
